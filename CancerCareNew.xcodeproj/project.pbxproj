@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		102280B21DE8A74500D9F21A /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102280B11DE8A74500D9F21A /* NetworkingService.swift */; };
 		10C18A771DE88F84000AE6E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18A761DE88F84000AE6E1 /* AppDelegate.swift */; };
 		10C18A791DE88F84000AE6E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18A781DE88F84000AE6E1 /* ViewController.swift */; };
 		10C18A7C1DE88F84000AE6E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C18A7A1DE88F84000AE6E1 /* Main.storyboard */; };
@@ -15,6 +16,11 @@
 		10C18A841DE88F84000AE6E1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C18A821DE88F84000AE6E1 /* LaunchScreen.storyboard */; };
 		10C18A8F1DE88F84000AE6E1 /* CancerCareNewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18A8E1DE88F84000AE6E1 /* CancerCareNewTests.swift */; };
 		10C18A9A1DE88F84000AE6E1 /* CancerCareNewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18A991DE88F84000AE6E1 /* CancerCareNewUITests.swift */; };
+		10C18AA81DE899E3000AE6E1 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18AA71DE899E3000AE6E1 /* RegisterPageViewController.swift */; };
+		10C18AAA1DE8A26F000AE6E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 10C18AA91DE8A26F000AE6E1 /* GoogleService-Info.plist */; };
+		538907C2037C428455849A7B /* Pods_CancerCareNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C37ED1E47B99DB62B2E60 /* Pods_CancerCareNew.framework */; };
+		BD6E5CFF63467D1E43D2E109 /* Pods_CancerCareNewTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A6A6F270301F735704C4FCC1 /* Pods_CancerCareNewTests.framework */; };
+		C74DAA45B7C1B69B6BBCCF15 /* Pods_CancerCareNewUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17FBBDDFB3E463171204566B /* Pods_CancerCareNewUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		102280B11DE8A74500D9F21A /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		10C18A731DE88F84000AE6E1 /* CancerCareNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CancerCareNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C18A761DE88F84000AE6E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10C18A781DE88F84000AE6E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -49,6 +56,17 @@
 		10C18A951DE88F84000AE6E1 /* CancerCareNewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CancerCareNewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C18A991DE88F84000AE6E1 /* CancerCareNewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancerCareNewUITests.swift; sourceTree = "<group>"; };
 		10C18A9B1DE88F84000AE6E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		10C18AA71DE899E3000AE6E1 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		10C18AA91DE8A26F000AE6E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Desktop/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		17C0A1D8691B0184FE376849 /* Pods-CancerCareNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNew/Pods-CancerCareNew.debug.xcconfig"; sourceTree = "<group>"; };
+		17FBBDDFB3E463171204566B /* Pods_CancerCareNewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CancerCareNewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		48FD740DEC9EDB46CDABC5B4 /* Pods-CancerCareNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNew.release.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNew/Pods-CancerCareNew.release.xcconfig"; sourceTree = "<group>"; };
+		61BD725C5D9EFAD9806674A8 /* Pods-CancerCareNewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNewUITests/Pods-CancerCareNewUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		68C072F128F189B55FA41B12 /* Pods-CancerCareNewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNewUITests/Pods-CancerCareNewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A6A6F270301F735704C4FCC1 /* Pods_CancerCareNewTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CancerCareNewTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C84C37ED1E47B99DB62B2E60 /* Pods_CancerCareNew.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CancerCareNew.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E07704788B8EF5ABB612929B /* Pods-CancerCareNewTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNewTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNewTests/Pods-CancerCareNewTests.release.xcconfig"; sourceTree = "<group>"; };
+		EC5560E33033D1E29EF934BE /* Pods-CancerCareNewTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNewTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNewTests/Pods-CancerCareNewTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				538907C2037C428455849A7B /* Pods_CancerCareNew.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD6E5CFF63467D1E43D2E109 /* Pods_CancerCareNewTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C74DAA45B7C1B69B6BBCCF15 /* Pods_CancerCareNewUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +104,8 @@
 				10C18A8D1DE88F84000AE6E1 /* CancerCareNewTests */,
 				10C18A981DE88F84000AE6E1 /* CancerCareNewUITests */,
 				10C18A741DE88F84000AE6E1 /* Products */,
+				AE820EC562EFC017FF5BC13D /* Pods */,
+				B7AEB68697D205011F2D86CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +122,7 @@
 		10C18A751DE88F84000AE6E1 /* CancerCareNew */ = {
 			isa = PBXGroup;
 			children = (
+				10C18AA91DE8A26F000AE6E1 /* GoogleService-Info.plist */,
 				10C18A761DE88F84000AE6E1 /* AppDelegate.swift */,
 				10C18A781DE88F84000AE6E1 /* ViewController.swift */,
 				10C18A7A1DE88F84000AE6E1 /* Main.storyboard */,
@@ -106,6 +130,8 @@
 				10C18A821DE88F84000AE6E1 /* LaunchScreen.storyboard */,
 				10C18A851DE88F84000AE6E1 /* Info.plist */,
 				10C18A7D1DE88F84000AE6E1 /* CancerCareNew.xcdatamodeld */,
+				10C18AA71DE899E3000AE6E1 /* RegisterPageViewController.swift */,
+				102280B11DE8A74500D9F21A /* NetworkingService.swift */,
 			);
 			path = CancerCareNew;
 			sourceTree = "<group>";
@@ -128,6 +154,29 @@
 			path = CancerCareNewUITests;
 			sourceTree = "<group>";
 		};
+		AE820EC562EFC017FF5BC13D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17C0A1D8691B0184FE376849 /* Pods-CancerCareNew.debug.xcconfig */,
+				48FD740DEC9EDB46CDABC5B4 /* Pods-CancerCareNew.release.xcconfig */,
+				EC5560E33033D1E29EF934BE /* Pods-CancerCareNewTests.debug.xcconfig */,
+				E07704788B8EF5ABB612929B /* Pods-CancerCareNewTests.release.xcconfig */,
+				61BD725C5D9EFAD9806674A8 /* Pods-CancerCareNewUITests.debug.xcconfig */,
+				68C072F128F189B55FA41B12 /* Pods-CancerCareNewUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B7AEB68697D205011F2D86CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C84C37ED1E47B99DB62B2E60 /* Pods_CancerCareNew.framework */,
+				A6A6F270301F735704C4FCC1 /* Pods_CancerCareNewTests.framework */,
+				17FBBDDFB3E463171204566B /* Pods_CancerCareNewUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +184,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10C18A9E1DE88F84000AE6E1 /* Build configuration list for PBXNativeTarget "CancerCareNew" */;
 			buildPhases = (
+				0CD0C013AC4DFB98A1BD8351 /* [CP] Check Pods Manifest.lock */,
 				10C18A6F1DE88F84000AE6E1 /* Sources */,
 				10C18A701DE88F84000AE6E1 /* Frameworks */,
 				10C18A711DE88F84000AE6E1 /* Resources */,
+				96800C0EE0E258768795D914 /* [CP] Embed Pods Frameworks */,
+				9D18C42113081C564A1441CF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +204,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10C18AA11DE88F84000AE6E1 /* Build configuration list for PBXNativeTarget "CancerCareNewTests" */;
 			buildPhases = (
+				DEA5F47654528539CCD2E483 /* [CP] Check Pods Manifest.lock */,
 				10C18A861DE88F84000AE6E1 /* Sources */,
 				10C18A871DE88F84000AE6E1 /* Frameworks */,
 				10C18A881DE88F84000AE6E1 /* Resources */,
+				8AE4DCDD605CF2E7EB901A56 /* [CP] Embed Pods Frameworks */,
+				F561134C216C0ABB01706803 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +225,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 10C18AA41DE88F84000AE6E1 /* Build configuration list for PBXNativeTarget "CancerCareNewUITests" */;
 			buildPhases = (
+				E2D3F597A54F93397D7C7C9C /* [CP] Check Pods Manifest.lock */,
 				10C18A911DE88F84000AE6E1 /* Sources */,
 				10C18A921DE88F84000AE6E1 /* Frameworks */,
 				10C18A931DE88F84000AE6E1 /* Resources */,
+				EE97664F47A14C36E22855C1 /* [CP] Embed Pods Frameworks */,
+				61AD2271C0EC942511A30B41 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -236,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				10C18A841DE88F84000AE6E1 /* LaunchScreen.storyboard in Resources */,
+				10C18AAA1DE8A26F000AE6E1 /* GoogleService-Info.plist in Resources */,
 				10C18A811DE88F84000AE6E1 /* Assets.xcassets in Resources */,
 				10C18A7C1DE88F84000AE6E1 /* Main.storyboard in Resources */,
 			);
@@ -257,11 +316,151 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0CD0C013AC4DFB98A1BD8351 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		61AD2271C0EC942511A30B41 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CancerCareNewUITests/Pods-CancerCareNewUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8AE4DCDD605CF2E7EB901A56 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CancerCareNewTests/Pods-CancerCareNewTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		96800C0EE0E258768795D914 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CancerCareNew/Pods-CancerCareNew-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9D18C42113081C564A1441CF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CancerCareNew/Pods-CancerCareNew-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DEA5F47654528539CCD2E483 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E2D3F597A54F93397D7C7C9C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		EE97664F47A14C36E22855C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CancerCareNewUITests/Pods-CancerCareNewUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F561134C216C0ABB01706803 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CancerCareNewTests/Pods-CancerCareNewTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		10C18A6F1DE88F84000AE6E1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				102280B21DE8A74500D9F21A /* NetworkingService.swift in Sources */,
+				10C18AA81DE899E3000AE6E1 /* RegisterPageViewController.swift in Sources */,
 				10C18A791DE88F84000AE6E1 /* ViewController.swift in Sources */,
 				10C18A771DE88F84000AE6E1 /* AppDelegate.swift in Sources */,
 				10C18A7F1DE88F84000AE6E1 /* CancerCareNew.xcdatamodeld in Sources */,
@@ -414,6 +613,7 @@
 		};
 		10C18A9F1DE88F84000AE6E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17C0A1D8691B0184FE376849 /* Pods-CancerCareNew.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CancerCareNew/Info.plist;
@@ -426,6 +626,7 @@
 		};
 		10C18AA01DE88F84000AE6E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 48FD740DEC9EDB46CDABC5B4 /* Pods-CancerCareNew.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CancerCareNew/Info.plist;
@@ -438,6 +639,7 @@
 		};
 		10C18AA21DE88F84000AE6E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC5560E33033D1E29EF934BE /* Pods-CancerCareNewTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -452,6 +654,7 @@
 		};
 		10C18AA31DE88F84000AE6E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E07704788B8EF5ABB612929B /* Pods-CancerCareNewTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -466,6 +669,7 @@
 		};
 		10C18AA51DE88F84000AE6E1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 61BD725C5D9EFAD9806674A8 /* Pods-CancerCareNewUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = CancerCareNewUITests/Info.plist;
@@ -479,6 +683,7 @@
 		};
 		10C18AA61DE88F84000AE6E1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 68C072F128F189B55FA41B12 /* Pods-CancerCareNewUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = CancerCareNewUITests/Info.plist;
@@ -509,6 +714,7 @@
 				10C18AA01DE88F84000AE6E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10C18AA11DE88F84000AE6E1 /* Build configuration list for PBXNativeTarget "CancerCareNewTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +723,7 @@
 				10C18AA31DE88F84000AE6E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		10C18AA41DE88F84000AE6E1 /* Build configuration list for PBXNativeTarget "CancerCareNewUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +732,7 @@
 				10C18AA61DE88F84000AE6E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
