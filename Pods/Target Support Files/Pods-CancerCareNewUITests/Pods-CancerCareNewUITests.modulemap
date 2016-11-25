@@ -1,0 +1,6 @@
+framework module Pods_CancerCareNewUITests {
+  umbrella header "Pods-CancerCareNewUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

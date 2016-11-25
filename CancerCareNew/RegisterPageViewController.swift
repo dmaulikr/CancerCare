@@ -15,7 +15,7 @@ class RegisterPageViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
-    
+    let networkingService = NetworkingService()
     
     @IBAction func registerButtonTapped(_ sender: Any) {
         
@@ -48,6 +48,7 @@ class RegisterPageViewController: UIViewController {
         
         
         //Store data
+        networkingService.signUp(name: nameTextField.text!, surname: surnameTextField.text!, email: emailTextField.text!, password: passwordTextField.text!)
         
         //Display alert message with confirmation
         
