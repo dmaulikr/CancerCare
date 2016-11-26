@@ -145,22 +145,22 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I18-PU-Dta">
                                 <rect key="frame" x="16" y="27" width="46" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="O4j-FK-bol"/>
+                                    <constraint firstAttribute="width" constant="46" id="R8i-e2-VAa"/>
                                 </constraints>
                                 <state key="normal" title="Menü"/>
                                 <connections>
-                                    <action selector="menuButtonAction:" destination="QOg-8Y-UPa" eventType="touchUpInside" id="qLo-ZW-4lM"/>
+                                    <segue destination="7K2-f5-llS" kind="presentation" id="Qwa-Xm-tuM"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UPK-71-9Kj" firstAttribute="top" secondItem="ovW-60-uXy" secondAttribute="top" id="AU7-R7-HXE"/>
-                            <constraint firstAttribute="trailing" secondItem="UPK-71-9Kj" secondAttribute="trailing" id="H4k-2A-0ox"/>
-                            <constraint firstItem="I18-PU-Dta" firstAttribute="top" secondItem="aAE-L4-ckY" secondAttribute="bottom" constant="7" id="HUH-pz-0Ed"/>
-                            <constraint firstItem="UPK-71-9Kj" firstAttribute="leading" secondItem="ovW-60-uXy" secondAttribute="leading" id="Qlc-nC-qq0"/>
-                            <constraint firstItem="UPK-71-9Kj" firstAttribute="centerY" secondItem="I18-PU-Dta" secondAttribute="centerY" id="XIX-zB-8wB"/>
-                            <constraint firstItem="I18-PU-Dta" firstAttribute="leading" secondItem="ovW-60-uXy" secondAttribute="leadingMargin" id="cwY-Vs-56W"/>
+                            <constraint firstAttribute="trailing" secondItem="UPK-71-9Kj" secondAttribute="trailing" id="6gq-Dh-DRy"/>
+                            <constraint firstItem="UPK-71-9Kj" firstAttribute="centerY" secondItem="I18-PU-Dta" secondAttribute="centerY" id="V7v-wr-PZs"/>
+                            <constraint firstItem="I18-PU-Dta" firstAttribute="top" secondItem="aAE-L4-ckY" secondAttribute="bottom" constant="7" id="jY1-7j-QVj"/>
+                            <constraint firstItem="UPK-71-9Kj" firstAttribute="top" secondItem="ovW-60-uXy" secondAttribute="top" id="oaq-An-X1x"/>
+                            <constraint firstItem="I18-PU-Dta" firstAttribute="leading" secondItem="ovW-60-uXy" secondAttribute="leadingMargin" id="wrU-Tk-uoj"/>
+                            <constraint firstItem="UPK-71-9Kj" firstAttribute="leading" secondItem="ovW-60-uXy" secondAttribute="leading" id="yZg-Bx-dWj"/>
                         </constraints>
                     </view>
                     <connections>
@@ -171,33 +171,281 @@
             </objects>
             <point key="canvasLocation" x="940" y="722.78860569715152"/>
         </scene>
-        <!--Menu Table View Controller-->
-        <scene sceneID="WuN-Qn-2xC">
+        <!--Patient Page View Controller-->
+        <scene sceneID="pxz-AC-NOd">
             <objects>
-                <tableViewController storyboardIdentifier="menuTablePage" id="Cq9-VK-2mO" customClass="MenuTableViewController" customModule="CancerCareNew" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="hjI-DM-Cfr">
+                <viewController storyboardIdentifier="patientPage" id="psk-D0-z5W" customClass="PatientPageViewController" customModule="CancerCareNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4V9-ck-OlY"/>
+                        <viewControllerLayoutGuide type="bottom" id="0WB-w5-BWd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7w1-8m-7fp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çocuğum" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsI-kf-pC1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0WB-w5-BWd" firstAttribute="top" secondItem="jsI-kf-pC1" secondAttribute="bottom" constant="583" id="0Bu-vy-rmA"/>
+                            <constraint firstItem="jsI-kf-pC1" firstAttribute="top" secondItem="7w1-8m-7fp" secondAttribute="top" id="SyP-h6-aFs"/>
+                            <constraint firstAttribute="trailing" secondItem="jsI-kf-pC1" secondAttribute="trailing" id="UT0-mN-Acv"/>
+                            <constraint firstItem="jsI-kf-pC1" firstAttribute="leading" secondItem="7w1-8m-7fp" secondAttribute="leading" id="rup-6q-vJm"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B46-VR-xHM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="1384"/>
+        </scene>
+        <!--Organizer View Controller-->
+        <scene sceneID="VbC-Hz-8HD">
+            <objects>
+                <viewController storyboardIdentifier="organizerPage" id="98g-wZ-Fdy" customClass="OrganizerViewController" customModule="CancerCareNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xx2-E5-cWt"/>
+                        <viewControllerLayoutGuide type="bottom" id="2aS-D4-cOM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="l5q-I4-4o7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planlayıcı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIH-2M-Bbn">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zIH-2M-Bbn" firstAttribute="top" secondItem="l5q-I4-4o7" secondAttribute="top" id="2UT-YK-DjA"/>
+                            <constraint firstItem="zIH-2M-Bbn" firstAttribute="leading" secondItem="l5q-I4-4o7" secondAttribute="leading" id="DIA-1O-ttD"/>
+                            <constraint firstAttribute="trailing" secondItem="zIH-2M-Bbn" secondAttribute="trailing" id="H93-Mq-aKA"/>
+                            <constraint firstItem="2aS-D4-cOM" firstAttribute="top" secondItem="zIH-2M-Bbn" secondAttribute="bottom" constant="583" id="hiu-zo-keV"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="a9W-fy-hIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="2048"/>
+        </scene>
+        <!--Vitals View Controller-->
+        <scene sceneID="u1C-pN-aG1">
+            <objects>
+                <viewController storyboardIdentifier="vitalsPage" id="0BO-fG-E1b" customClass="VitalsViewController" customModule="CancerCareNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="4VZ-DB-r48"/>
+                        <viewControllerLayoutGuide type="bottom" id="IdT-Qf-Laq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KOZ-cj-rAS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sağlık Değerleri" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SO-WT-gF4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="IdT-Qf-Laq" firstAttribute="top" secondItem="2SO-WT-gF4" secondAttribute="bottom" constant="583" id="YeD-jc-W10"/>
+                            <constraint firstItem="2SO-WT-gF4" firstAttribute="leading" secondItem="KOZ-cj-rAS" secondAttribute="leading" id="eHQ-qY-ykl"/>
+                            <constraint firstAttribute="trailing" secondItem="2SO-WT-gF4" secondAttribute="trailing" id="n4q-o2-fww"/>
+                            <constraint firstItem="2SO-WT-gF4" firstAttribute="top" secondItem="KOZ-cj-rAS" secondAttribute="top" id="p4r-rG-Dfz"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ai-pz-7ui" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="2716"/>
+        </scene>
+        <!--My Account View Controller-->
+        <scene sceneID="mRn-Sc-UsF">
+            <objects>
+                <viewController storyboardIdentifier="myAccountPage" id="hZA-gx-j5c" customClass="MyAccountViewController" customModule="CancerCareNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Lfn-ZQ-C88"/>
+                        <viewControllerLayoutGuide type="bottom" id="EK5-vg-vWp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2nK-9W-gw0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hesabım" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69r-yO-Yuz">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="69r-yO-Yuz" secondAttribute="trailing" id="3uQ-ad-OHe"/>
+                            <constraint firstItem="69r-yO-Yuz" firstAttribute="leading" secondItem="2nK-9W-gw0" secondAttribute="leading" id="ZFe-Iy-I5D"/>
+                            <constraint firstItem="EK5-vg-vWp" firstAttribute="top" secondItem="69r-yO-Yuz" secondAttribute="bottom" constant="583" id="tgn-oK-atX"/>
+                            <constraint firstItem="69r-yO-Yuz" firstAttribute="top" secondItem="2nK-9W-gw0" secondAttribute="top" id="zg4-7x-ZiD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mlq-5m-dpb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="3376"/>
+        </scene>
+        <!--Secondary Account View Controller-->
+        <scene sceneID="0vj-6d-WuS">
+            <objects>
+                <viewController storyboardIdentifier="secondaryAccountPage" id="R40-9i-QCt" customClass="SecondaryAccountViewController" customModule="CancerCareNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hpd-ia-H1K"/>
+                        <viewControllerLayoutGuide type="bottom" id="mM5-xM-YyO"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ySO-ag-zpe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="İkincil Hesap" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2z-lZ-v4V">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="a2z-lZ-v4V" secondAttribute="trailing" id="CNF-Ts-PTg"/>
+                            <constraint firstItem="a2z-lZ-v4V" firstAttribute="leading" secondItem="ySO-ag-zpe" secondAttribute="leading" id="EYZ-U1-SJc"/>
+                            <constraint firstItem="mM5-xM-YyO" firstAttribute="top" secondItem="a2z-lZ-v4V" secondAttribute="bottom" constant="583" id="S4V-UK-Zxa"/>
+                            <constraint firstItem="a2z-lZ-v4V" firstAttribute="top" secondItem="ySO-ag-zpe" secondAttribute="top" id="sxs-or-NvR"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1dp-lK-SYM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="4041"/>
+        </scene>
+        <!--About View Controller-->
+        <scene sceneID="Cs7-Hv-5xO">
+            <objects>
+                <viewController storyboardIdentifier="aboutPage" id="zo3-d7-Q3g" customClass="AboutViewController" customModule="CancerCareNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ebL-4h-cZg"/>
+                        <viewControllerLayoutGuide type="bottom" id="0sO-NO-a0z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="7w6-0t-kd2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hakkımızda" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jan-Ja-AHa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jan-Ja-AHa" firstAttribute="top" secondItem="7w6-0t-kd2" secondAttribute="top" id="5aZ-5d-u21"/>
+                            <constraint firstItem="jan-Ja-AHa" firstAttribute="leading" secondItem="7w6-0t-kd2" secondAttribute="leading" id="8kg-5Y-73k"/>
+                            <constraint firstItem="0sO-NO-a0z" firstAttribute="top" secondItem="jan-Ja-AHa" secondAttribute="bottom" constant="583" id="j2h-O6-1Np"/>
+                            <constraint firstAttribute="trailing" secondItem="jan-Ja-AHa" secondAttribute="trailing" id="rf0-BO-Ri3"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YP9-6k-0b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="4710"/>
+        </scene>
+        <!--Logout View Controller-->
+        <scene sceneID="Fge-4a-8af">
+            <objects>
+                <viewController storyboardIdentifier="logoutPage" id="IhE-5b-eux" customClass="LogoutViewController" customModule="CancerCareNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="NKa-e0-AEn"/>
+                        <viewControllerLayoutGuide type="bottom" id="3Tp-lD-vvt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oVX-eH-9un">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Çıkış" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ylt-Fb-b5m">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ylt-Fb-b5m" firstAttribute="top" secondItem="oVX-eH-9un" secondAttribute="top" id="aLP-Ht-qzZ"/>
+                            <constraint firstItem="3Tp-lD-vvt" firstAttribute="top" secondItem="ylt-Fb-b5m" secondAttribute="bottom" constant="583" id="dxH-qp-Nyb"/>
+                            <constraint firstAttribute="trailing" secondItem="ylt-Fb-b5m" secondAttribute="trailing" id="s5U-Zf-wv8"/>
+                            <constraint firstItem="ylt-Fb-b5m" firstAttribute="leading" secondItem="oVX-eH-9un" secondAttribute="leading" id="upu-FM-DnD"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ac7-or-hge" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940" y="5376"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="4VM-NW-TSa">
+            <objects>
+                <navigationController id="7K2-f5-llS" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Fa6-Uz-Xp1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="GPo-Eu-PmR" kind="relationship" relationship="rootViewController" id="6fd-WI-xoo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgC-rK-euL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1905" y="723"/>
+        </scene>
+        <!--Menu Table View Controller-->
+        <scene sceneID="Mak-lG-cHN">
+            <objects>
+                <tableViewController id="GPo-Eu-PmR" customClass="MenuTableViewController" customModule="CancerCareNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="LwX-LC-cKp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="84Z-1g-PAr">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="lkF-Ow-5df">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="84Z-1g-PAr" id="hWl-ml-d7l">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lkF-Ow-5df" id="6r3-yc-nri">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
                         <connections>
-                            <outlet property="dataSource" destination="Cq9-VK-2mO" id="eam-YN-PZd"/>
-                            <outlet property="delegate" destination="Cq9-VK-2mO" id="SD1-Bm-ULZ"/>
+                            <outlet property="dataSource" destination="GPo-Eu-PmR" id="Jdo-7N-icT"/>
+                            <outlet property="delegate" destination="GPo-Eu-PmR" id="yHH-e1-jEU"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="Wr1-xA-2OH"/>
                 </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="o6B-by-Jhd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4wj-J4-cRm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1877.5999999999999" y="726.38680659670172"/>
+            <point key="canvasLocation" x="2895" y="723"/>
         </scene>
         <!--Register Page View Controller-->
         <scene sceneID="Lgi-hc-4Qm">

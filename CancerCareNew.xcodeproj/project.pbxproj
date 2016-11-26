@@ -7,8 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1016F0DA1DE9CBF200D52E92 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1016F0D91DE9CBF200D52E92 /* MenuTableViewController.swift */; };
 		102280B21DE8A74500D9F21A /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102280B11DE8A74500D9F21A /* NetworkingService.swift */; };
+		105244E41DEA0654008B5FF0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244E31DEA0654008B5FF0 /* MenuTableViewController.swift */; };
+		105244E61DEA11F0008B5FF0 /* PatientPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244E51DEA11F0008B5FF0 /* PatientPageViewController.swift */; };
+		105244E81DEA1211008B5FF0 /* OrganizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244E71DEA1211008B5FF0 /* OrganizerViewController.swift */; };
+		105244EA1DEA1236008B5FF0 /* VitalsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244E91DEA1236008B5FF0 /* VitalsViewController.swift */; };
+		105244EC1DEA124A008B5FF0 /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244EB1DEA124A008B5FF0 /* MyAccountViewController.swift */; };
+		105244EE1DEA125F008B5FF0 /* SecondaryAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244ED1DEA125F008B5FF0 /* SecondaryAccountViewController.swift */; };
+		105244F01DEA127A008B5FF0 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244EF1DEA127A008B5FF0 /* AboutViewController.swift */; };
+		105244F21DEA12B9008B5FF0 /* LogoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244F11DEA12B9008B5FF0 /* LogoutViewController.swift */; };
 		10C18A771DE88F84000AE6E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18A761DE88F84000AE6E1 /* AppDelegate.swift */; };
 		10C18A791DE88F84000AE6E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18A781DE88F84000AE6E1 /* ViewController.swift */; };
 		10C18A7C1DE88F84000AE6E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 10C18A7A1DE88F84000AE6E1 /* Main.storyboard */; };
@@ -44,8 +51,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1016F0D91DE9CBF200D52E92 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		102280B11DE8A74500D9F21A /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		105244E31DEA0654008B5FF0 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
+		105244E51DEA11F0008B5FF0 /* PatientPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientPageViewController.swift; sourceTree = "<group>"; };
+		105244E71DEA1211008B5FF0 /* OrganizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerViewController.swift; sourceTree = "<group>"; };
+		105244E91DEA1236008B5FF0 /* VitalsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VitalsViewController.swift; sourceTree = "<group>"; };
+		105244EB1DEA124A008B5FF0 /* MyAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		105244ED1DEA125F008B5FF0 /* SecondaryAccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryAccountViewController.swift; sourceTree = "<group>"; };
+		105244EF1DEA127A008B5FF0 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		105244F11DEA12B9008B5FF0 /* LogoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogoutViewController.swift; sourceTree = "<group>"; };
 		10C18A731DE88F84000AE6E1 /* CancerCareNew.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CancerCareNew.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		10C18A761DE88F84000AE6E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		10C18A781DE88F84000AE6E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -140,7 +154,14 @@
 				9943A3CD1DE91DD100F95141 /* LoginViewController.swift */,
 				102280B11DE8A74500D9F21A /* NetworkingService.swift */,
 				9943A3CF1DE9250A00F95141 /* HomePageViewController.swift */,
-				1016F0D91DE9CBF200D52E92 /* MenuTableViewController.swift */,
+				105244E31DEA0654008B5FF0 /* MenuTableViewController.swift */,
+				105244E51DEA11F0008B5FF0 /* PatientPageViewController.swift */,
+				105244E71DEA1211008B5FF0 /* OrganizerViewController.swift */,
+				105244E91DEA1236008B5FF0 /* VitalsViewController.swift */,
+				105244EB1DEA124A008B5FF0 /* MyAccountViewController.swift */,
+				105244ED1DEA125F008B5FF0 /* SecondaryAccountViewController.swift */,
+				105244EF1DEA127A008B5FF0 /* AboutViewController.swift */,
+				105244F11DEA12B9008B5FF0 /* LogoutViewController.swift */,
 			);
 			path = CancerCareNew;
 			sourceTree = "<group>";
@@ -468,13 +489,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				105244E81DEA1211008B5FF0 /* OrganizerViewController.swift in Sources */,
+				105244EA1DEA1236008B5FF0 /* VitalsViewController.swift in Sources */,
+				105244EC1DEA124A008B5FF0 /* MyAccountViewController.swift in Sources */,
 				9943A3CE1DE91DD100F95141 /* LoginViewController.swift in Sources */,
+				105244E61DEA11F0008B5FF0 /* PatientPageViewController.swift in Sources */,
 				9943A3D01DE9250A00F95141 /* HomePageViewController.swift in Sources */,
 				102280B21DE8A74500D9F21A /* NetworkingService.swift in Sources */,
 				10C18AA81DE899E3000AE6E1 /* RegisterPageViewController.swift in Sources */,
-				1016F0DA1DE9CBF200D52E92 /* MenuTableViewController.swift in Sources */,
+				105244E41DEA0654008B5FF0 /* MenuTableViewController.swift in Sources */,
 				10C18A791DE88F84000AE6E1 /* ViewController.swift in Sources */,
+				105244F01DEA127A008B5FF0 /* AboutViewController.swift in Sources */,
 				10C18A771DE88F84000AE6E1 /* AppDelegate.swift in Sources */,
+				105244EE1DEA125F008B5FF0 /* SecondaryAccountViewController.swift in Sources */,
+				105244F21DEA12B9008B5FF0 /* LogoutViewController.swift in Sources */,
 				10C18A7F1DE88F84000AE6E1 /* CancerCareNew.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
