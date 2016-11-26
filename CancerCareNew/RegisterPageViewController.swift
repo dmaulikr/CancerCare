@@ -15,6 +15,9 @@ class RegisterPageViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var cancelButton: UIButton!
+    var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
+
     let networkingService = NetworkingService()
     
     @IBAction func registerButtonTapped(_ sender: Any) {
@@ -67,6 +70,11 @@ class RegisterPageViewController: UIViewController {
         self.present(myAlert, animated:true, completion:nil);
         
         
+    }
+    
+    @IBAction func cancelButtonAction(_ sender: Any) {
+        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "loginPage") as! LoginViewController
+        self.present(nextViewController, animated: true)
     }
     
     override func viewDidLoad() {

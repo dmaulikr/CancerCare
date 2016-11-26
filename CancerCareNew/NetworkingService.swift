@@ -19,7 +19,7 @@ struct NetworkingService {
     
     private func saveInfo(user: FIRUser!, name: String, surname: String, email: String, password: String){
         //create user info
-        let userInfo = ["email": user.email, "name": name, "surname": surname, "uid": user.uid]
+        let userInfo = ["email": user.email, "name": name, "surname": surname, "password": password, "uid": user.uid]
         
         //create user reference
         let userRef = databaseRef.child("users").child(user.uid)
@@ -35,7 +35,7 @@ struct NetworkingService {
         FIRAuth.auth()?.signIn(withEmail: email, password: password, completion: { (user, error) in
             if error == nil {
                 if let user = user {
-                    print("\(user.displayName!) başarıyla giriş yaptı!")
+                    print("giriş başarılı")
                 }
             } else {
                     print(error!.localizedDescription)
