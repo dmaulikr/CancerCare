@@ -7,9 +7,37 @@
 //
 
 import UIKit
+import EventKit
 
 class OrganizerViewController: UIViewController {
+    
+    var savedEvent : String = ""
 
+    @IBOutlet weak var eventsToShow: UITextView!
+    
+    @IBOutlet weak var eventTextField: UITextField!
+    
+    @IBOutlet weak var datePicker: UIDatePicker!
+    
+    @IBAction func addEventButtonTapped(_ sender: Any) {
+        
+        var title = eventTextField.text
+        var date = datePicker.date
+        
+        let formatter = DateFormatter()
+        formatter.calendar = datePicker.calendar
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        let dateString = formatter.string(from: date)
+        
+        savedEvent += title! + ": " + dateString + "\n"
+        
+        eventsToShow.text = savedEvent
+        
+        
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

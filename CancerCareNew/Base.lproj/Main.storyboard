@@ -193,10 +193,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="0WB-w5-BWd" firstAttribute="top" secondItem="jsI-kf-pC1" secondAttribute="bottom" constant="583" id="0Bu-vy-rmA"/>
-                            <constraint firstItem="jsI-kf-pC1" firstAttribute="top" secondItem="7w1-8m-7fp" secondAttribute="top" id="SyP-h6-aFs"/>
-                            <constraint firstAttribute="trailing" secondItem="jsI-kf-pC1" secondAttribute="trailing" id="UT0-mN-Acv"/>
-                            <constraint firstItem="jsI-kf-pC1" firstAttribute="leading" secondItem="7w1-8m-7fp" secondAttribute="leading" id="rup-6q-vJm"/>
+                            <constraint firstItem="jsI-kf-pC1" firstAttribute="top" secondItem="7w1-8m-7fp" secondAttribute="top" id="XiO-rb-OR5"/>
+                            <constraint firstAttribute="trailing" secondItem="jsI-kf-pC1" secondAttribute="trailing" id="hSa-KI-aP2"/>
+                            <constraint firstItem="0WB-w5-BWd" firstAttribute="top" secondItem="jsI-kf-pC1" secondAttribute="bottom" constant="583" id="vWj-BN-lxZ"/>
+                            <constraint firstItem="jsI-kf-pC1" firstAttribute="leading" secondItem="7w1-8m-7fp" secondAttribute="leading" id="wcr-Uo-Yz9"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -216,26 +216,83 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planlayıcı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIH-2M-Bbn">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Planlayıcı" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zIH-2M-Bbn">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Etkinlik ismi:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TCU-qh-EFy">
+                                <rect key="frame" x="16" y="110" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pzQ-c3-4KA">
+                                <rect key="frame" x="16" y="139" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tarihi ve saati seçin:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-OR-az2">
+                                <rect key="frame" x="16" y="177" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="H2T-8d-xYQ">
+                                <rect key="frame" x="0.0" y="206" width="375" height="216"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <date key="date" timeIntervalSinceReferenceDate="501887040.30809498">
+                                    <!--2016-11-26 21:04:00 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nq-9O-5uO">
+                                <rect key="frame" x="140" y="430" width="94" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Yeni veri ekle"/>
+                                <connections>
+                                    <action selector="addEventButtonTapped:" destination="98g-wZ-Fdy" eventType="touchUpInside" id="B3m-z9-SW1"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Etkinlikler:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tp3-1Z-cXn">
+                                <rect key="frame" x="16" y="471" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dLA-37-oS4">
+                                <rect key="frame" x="120" y="560" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="ce ha pe" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CVK-xS-AU2">
+                                <rect key="frame" x="16" y="500" width="343" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="zIH-2M-Bbn" firstAttribute="top" secondItem="l5q-I4-4o7" secondAttribute="top" id="2UT-YK-DjA"/>
-                            <constraint firstItem="zIH-2M-Bbn" firstAttribute="leading" secondItem="l5q-I4-4o7" secondAttribute="leading" id="DIA-1O-ttD"/>
-                            <constraint firstAttribute="trailing" secondItem="zIH-2M-Bbn" secondAttribute="trailing" id="H93-Mq-aKA"/>
-                            <constraint firstItem="2aS-D4-cOM" firstAttribute="top" secondItem="zIH-2M-Bbn" secondAttribute="bottom" constant="583" id="hiu-zo-keV"/>
-                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="datePicker" destination="H2T-8d-xYQ" id="nB8-aK-aZT"/>
+                        <outlet property="eventTextField" destination="pzQ-c3-4KA" id="ehc-VW-mLf"/>
+                        <outlet property="eventsToShow" destination="CVK-xS-AU2" id="sgS-bv-sAn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9W-fy-hIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="2048"/>
+            <point key="canvasLocation" x="940" y="2047.826086956522"/>
         </scene>
         <!--Vitals View Controller-->
         <scene sceneID="u1C-pN-aG1">
@@ -388,6 +445,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Çıkmak istediğinize emin misiniz?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qjD-Ho-2vu">
+                                <rect key="frame" x="16" y="238" width="343" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJe-pp-N1t">
+                                <rect key="frame" x="16" y="267" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Evet"/>
+                                <connections>
+                                    <action selector="logOutTapped:" destination="IhE-5b-eux" eventType="touchUpInside" id="33J-AL-ciZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnm-HO-r4D">
+                                <rect key="frame" x="16" y="305" width="343" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Ana sayfaya geri dön"/>
+                                <connections>
+                                    <action selector="cancelLogOutTapped:" destination="IhE-5b-eux" eventType="touchUpInside" id="3PJ-J9-sN1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -397,10 +477,15 @@
                             <constraint firstItem="ylt-Fb-b5m" firstAttribute="leading" secondItem="oVX-eH-9un" secondAttribute="leading" id="upu-FM-DnD"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cancelLogOutButton" destination="nnm-HO-r4D" id="Dzw-ED-Yw7"/>
+                        <outlet property="exitQuestionLabel" destination="qjD-Ho-2vu" id="RKq-SE-dbs"/>
+                        <outlet property="logOutButton" destination="TJe-pp-N1t" id="y1L-2M-3bA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ac7-or-hge" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="5376"/>
+            <point key="canvasLocation" x="940" y="5375.2623688155927"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="4VM-NW-TSa">

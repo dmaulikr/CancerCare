@@ -9,7 +9,27 @@
 import UIKit
 
 class LogoutViewController: UIViewController {
+    var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
 
+    @IBOutlet weak var exitQuestionLabel: UILabel!
+    @IBOutlet weak var logOutButton: UIButton!
+    @IBOutlet weak var cancelLogOutButton: UIButton!
+    
+    @IBAction func logOutTapped(_ sender: Any) {
+        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "loginPage") as! LoginViewController
+        self.present(nextViewController, animated: true)
+
+        
+    }
+    
+    @IBAction func cancelLogOutTapped(_ sender: Any) {
+        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "homePage") as! HomePageViewController
+        self.present(nextViewController, animated: true)
+
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
