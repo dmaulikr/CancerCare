@@ -8,10 +8,15 @@
 
 import UIKit
 import EventKit
+import Firebase
+import FirebaseAuth
+
 
 class OrganizerViewController: UIViewController {
     
     var savedEvent : String = ""
+    let networkingService = NetworkingService()
+
 
     @IBOutlet weak var eventsToShow: UITextView!
     
@@ -34,6 +39,9 @@ class OrganizerViewController: UIViewController {
         
         eventsToShow.text = savedEvent
         
+        let currUser = FIRAuth.auth()?.currentUser
+    
+        networkingService.updateEvents(user: currUser!, event: savedEvent)
         
         
     }

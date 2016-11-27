@@ -7,15 +7,30 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
+import FirebaseStorage
+import FirebaseDatabase
 
 class HomePageViewController: UIViewController {
+    
+    @IBOutlet weak var moodSlider: UISlider!
+    @IBOutlet weak var eventLabel: UILabel!
+    let databaseRef = FIRDatabase.database().reference()
+    let storageRef = FIRStorage.storage().reference()
+
     
     @IBOutlet weak var menuButton: UIButton!
     var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        /*
+        let currUser = FIRAuth.auth()?.currentUser
+        let userID = currUser?.uid
+        eventLabel.text = databaseRef.child("children").child(userID!).value(forKeyPath: "/events/event") as! String?
+        //eventLabel.text =
+        */
         // Do any additional setup after loading the view.
     }
 

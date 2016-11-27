@@ -112,6 +112,17 @@ struct NetworkingService {
         }
     }
     
+    func updateEvents(user: FIRUser, event: String){
+        let userID = user.uid
+        let childRef = databaseRef.child("children").child(userID)
+        let events = childRef.child("events")
+        
+        if event != "" {
+            events.child("event").setValue(event)
+        }
+
+    }
+    
     
     
     
