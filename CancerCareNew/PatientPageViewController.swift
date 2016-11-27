@@ -9,6 +9,17 @@
 import UIKit
 
 class PatientPageViewController: UIViewController {
+    @IBOutlet weak var nameTextField: UILabel!
+    @IBOutlet weak var surnameTextField: UILabel!
+    @IBOutlet weak var birthdateTextField: UILabel!
+    @IBOutlet weak var diagnosisTextField: UILabel!
+    @IBOutlet weak var diagnosisDateTextField: UILabel!
+    @IBOutlet weak var treatmentLocation: UILabel!
+    @IBOutlet weak var treatmentType: UILabel!
+    @IBOutlet weak var editPatientInfoButton: UIButton!
+    @IBOutlet weak var doctorInfoButton: UIButton!
+    @IBOutlet weak var doctorNameTextField: UITextField!
+    var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +30,15 @@ class PatientPageViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func editPatientInfoButtonAction(_ sender: Any) {
+        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "editPatientInfoPage") as! EditPatientInfoViewController
+        self.present(nextViewController, animated: true)        
+    }
+    
+    @IBAction func doctorInfoButtonAction(_ sender: Any) {
+        // create doctor page and do stuff
     }
     
 

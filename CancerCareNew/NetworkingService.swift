@@ -56,6 +56,34 @@ struct NetworkingService {
         })
     }
     
+    // name, surname, birthdate, diag, diagdate, treloc, tretype
+    
+    func updateChildInfo(user: FIRUser, name: String, surname: String, birthDate: String, diagnosis: String, diagnosisDate: String, treatmentLocation: String, treatmentType: String){
+        let userID = user.uid
+        let childRef = databaseRef.child("children").child(userID)
+        if name != "" {
+            childRef.child("name").setValue(name)
+        }
+        if surname != "" {
+            childRef.child("surname").setValue(surname)
+        }
+        if birthDate != "" {
+            childRef.child("birthDate").setValue(birthDate)
+        }
+        if diagnosis != "" {
+            childRef.child("diagnosis").setValue(diagnosis)
+        }
+        if diagnosisDate != "" {
+            childRef.child("diagnosisDate").setValue(diagnosisDate)
+        }
+        if treatmentLocation != "" {
+            childRef.child("treatmentLocation").setValue(treatmentLocation)
+        }
+        if treatmentType != "" {
+            childRef.child("treatmentType").setValue(treatmentType)
+        }
+    }
+    
     
     
     

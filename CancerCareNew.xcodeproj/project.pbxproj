@@ -26,6 +26,7 @@
 		10C18A9A1DE88F84000AE6E1 /* CancerCareNewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18A991DE88F84000AE6E1 /* CancerCareNewUITests.swift */; };
 		10C18AA81DE899E3000AE6E1 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18AA71DE899E3000AE6E1 /* RegisterPageViewController.swift */; };
 		538907C2037C428455849A7B /* Pods_CancerCareNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C37ED1E47B99DB62B2E60 /* Pods_CancerCareNew.framework */; };
+		98599ED21DEA51C9003DAB0C /* EditPatientInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98599ED11DEA51C9003DAB0C /* EditPatientInfoViewController.swift */; };
 		9943A3CC1DE91D1400F95141 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9943A3CB1DE91D1400F95141 /* GoogleService-Info.plist */; };
 		9943A3CE1DE91DD100F95141 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943A3CD1DE91DD100F95141 /* LoginViewController.swift */; };
 		9943A3D01DE9250A00F95141 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943A3CF1DE9250A00F95141 /* HomePageViewController.swift */; };
@@ -80,6 +81,7 @@
 		48FD740DEC9EDB46CDABC5B4 /* Pods-CancerCareNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNew.release.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNew/Pods-CancerCareNew.release.xcconfig"; sourceTree = "<group>"; };
 		61BD725C5D9EFAD9806674A8 /* Pods-CancerCareNewUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNewUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNewUITests/Pods-CancerCareNewUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		68C072F128F189B55FA41B12 /* Pods-CancerCareNewUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNewUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNewUITests/Pods-CancerCareNewUITests.release.xcconfig"; sourceTree = "<group>"; };
+		98599ED11DEA51C9003DAB0C /* EditPatientInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPatientInfoViewController.swift; sourceTree = "<group>"; };
 		9943A3CB1DE91D1400F95141 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9943A3CD1DE91DD100F95141 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9943A3CF1DE9250A00F95141 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				105244ED1DEA125F008B5FF0 /* SecondaryAccountViewController.swift */,
 				105244EF1DEA127A008B5FF0 /* AboutViewController.swift */,
 				105244F11DEA12B9008B5FF0 /* LogoutViewController.swift */,
+				98599ED11DEA51C9003DAB0C /* EditPatientInfoViewController.swift */,
 			);
 			path = CancerCareNew;
 			sourceTree = "<group>";
@@ -493,6 +496,7 @@
 				105244EA1DEA1236008B5FF0 /* VitalsViewController.swift in Sources */,
 				105244EC1DEA124A008B5FF0 /* MyAccountViewController.swift in Sources */,
 				9943A3CE1DE91DD100F95141 /* LoginViewController.swift in Sources */,
+				98599ED21DEA51C9003DAB0C /* EditPatientInfoViewController.swift in Sources */,
 				105244E61DEA11F0008B5FF0 /* PatientPageViewController.swift in Sources */,
 				9943A3D01DE9250A00F95141 /* HomePageViewController.swift in Sources */,
 				102280B21DE8A74500D9F21A /* NetworkingService.swift in Sources */,
