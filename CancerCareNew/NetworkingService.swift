@@ -84,6 +84,34 @@ struct NetworkingService {
         }
     }
     
+    func updateChildBlood(user: FIRUser, rbc: String, wbc: String, anc: String){
+        
+        let userID = user.uid
+        let childRef = databaseRef.child("children").child(userID)
+        let timeStamp = childRef.child("timestamp")
+        if rbc != "" {
+            timeStamp.child("rbc").setValue(rbc)
+        }
+        if wbc != "" {
+            timeStamp.child("wbc").setValue(wbc)
+        }
+        if anc != "" {
+            timeStamp.child("anc").setValue(anc)
+        }
+       
+        
+        
+    }
+    func updateChildTemp(user: FIRUser, temp: String){
+        let userID = user.uid
+        let childRef = databaseRef.child("children").child(userID)
+        let timeStamp = childRef.child("timestamp")
+
+        if temp != "" {
+            timeStamp.child("temp").setValue(temp)
+        }
+    }
+    
     
     
     
