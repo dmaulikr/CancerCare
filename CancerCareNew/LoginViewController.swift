@@ -19,6 +19,9 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.emailTextField.text = "kk@gmail.com"
+        self.passwordTextField.text = "cehape"
+        
 
         // Do any additional setup after loading the view.
     }
@@ -30,6 +33,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func registerAction(_ sender: Any) {
         let nextViewController = storyboardRefForLogin.instantiateViewController(withIdentifier: "registerPage") as! RegisterPageViewController
+        self.dismiss(animated: false, completion: nil)
         self.present(nextViewController, animated: true)
     }
     
@@ -57,6 +61,8 @@ class LoginViewController: UIViewController {
                     self.emailTextField.text = ""
                     self.passwordTextField.text = ""
                     let nextViewController = self.storyboardRefForLogin.instantiateViewController(withIdentifier: "homePage") as! HomePageViewController
+                    self.dismiss(animated: false, completion: nil)
+                    self.dismiss(animated: false, completion: nil)
                     self.present(nextViewController, animated: true)
                 }
                 else

@@ -25,6 +25,9 @@ class HomePageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.title = "Ana Sayfa"
+        self.navigationItem.title = self.navigationController?.title
+
         /*
         let currUser = FIRAuth.auth()?.currentUser
         let userID = currUser?.uid

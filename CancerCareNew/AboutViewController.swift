@@ -12,7 +12,8 @@ class AboutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.title = "Hakkımızda"
+        self.navigationItem.title = self.navigationController?.title
         // Do any additional setup after loading the view.
     }
 

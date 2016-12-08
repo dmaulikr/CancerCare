@@ -114,12 +114,21 @@ struct NetworkingService {
     
     func updateEvents(user: FIRUser, event: String){
         let userID = user.uid
+        let eventRef = databaseRef.child("events").child(userID) // this will keep all events of the user in the same place. we may or may not want to use this because I cannot anticipate whether this is the better solution
+        let eventToBeSaved = eventRef.childByAutoId()
+        
+        if event != "" {
+            eventToBeSaved.setValue(event)
+        }
+        
+        /*
         let childRef = databaseRef.child("children").child(userID)
         let events = childRef.child("events")
-        
         if event != "" {
             events.child("event").setValue(event)
         }
+        */
+
 
     }
     

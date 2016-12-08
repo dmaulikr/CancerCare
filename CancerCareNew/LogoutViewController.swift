@@ -14,16 +14,15 @@ class LogoutViewController: UIViewController {
     @IBOutlet weak var exitQuestionLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var cancelLogOutButton: UIButton!
-    
-    @IBAction func logOutTapped(_ sender: Any) {
+    @IBAction func logoutTap(_ sender: UIButton) {
         let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "loginPage") as! LoginViewController
         self.present(nextViewController, animated: true)
-
-        
     }
+   
     
     @IBAction func cancelLogOutTapped(_ sender: Any) {
         let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "homePage") as! HomePageViewController
+        self.dismiss(animated: false, completion: nil)
         self.present(nextViewController, animated: true)
 
         
@@ -32,6 +31,9 @@ class LogoutViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.title = "Çıkış Yap"
+        self.navigationItem.title = self.navigationController?.title
+
 
         // Do any additional setup after loading the view.
     }

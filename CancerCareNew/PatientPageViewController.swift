@@ -23,6 +23,8 @@ class PatientPageViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.title = "Çocuğum"
+        self.navigationItem.title = self.navigationController?.title
 
         // Do any additional setup after loading the view.
     }
@@ -34,7 +36,7 @@ class PatientPageViewController: UIViewController {
     
     @IBAction func editPatientInfoButtonAction(_ sender: Any) {
         let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "editPatientInfoPage") as! EditPatientInfoViewController
-        self.present(nextViewController, animated: true)        
+        self.navigationController!.pushViewController(nextViewController, animated: true)
     }
     
     @IBAction func doctorInfoButtonAction(_ sender: Any) {

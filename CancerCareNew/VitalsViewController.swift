@@ -44,6 +44,9 @@ class VitalsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.title = "Sağlık Değerleri"
+        self.navigationItem.title = self.navigationController?.title
+
 
         // Do any additional setup after loading the view.
     }

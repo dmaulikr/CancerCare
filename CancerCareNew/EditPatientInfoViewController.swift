@@ -50,6 +50,7 @@ class EditPatientInfoViewController: UIViewController {
         
         // go patient page
         let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "patientPage") as! PatientPageViewController
+        self.dismiss(animated: false, completion: nil)
         self.present(nextViewController, animated: true)
 
         
@@ -58,6 +59,7 @@ class EditPatientInfoViewController: UIViewController {
 
     @IBAction func cancelPatientInfoButtonAction(_ sender: Any) {
         let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "patientPage") as! PatientPageViewController
+        self.dismiss(animated: false, completion: nil)
         self.present(nextViewController, animated: true)
     }
     /*

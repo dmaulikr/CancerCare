@@ -74,6 +74,7 @@ class RegisterPageViewController: UIViewController {
     
     @IBAction func cancelButtonAction(_ sender: Any) {
         let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "loginPage") as! LoginViewController
+        self.dismiss(animated: false, completion: nil)
         self.present(nextViewController, animated: true)
     }
     
