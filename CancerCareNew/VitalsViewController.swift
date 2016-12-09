@@ -21,24 +21,22 @@ class VitalsViewController: UIViewController {
     
     @IBOutlet weak var tempTextField: UITextField!
     
+    let currUser = FIRAuth.auth()?.currentUser
+    
     let networkingService = NetworkingService()
     
     @IBAction func addBloodButtonTapped(_ sender: Any) {
         // do stuff
-        let currUser = FIRAuth.auth()?.currentUser
+        //let currUser = FIRAuth.auth()?.currentUser
         //let currUserID = currUser?.uid
         //let childRef = databaseRef.child("children").child(currUserID!)
         // childRef.child("childName").setValue(editNameTextfield.text)
         networkingService.updateChildBlood(user: currUser!, rbc: self.rbcTextField.text!, wbc: self.wbcTextField.text!, anc: self.ancTextField.text!)
-
-        
     }
     
     @IBAction func addTempButtonTapped(_ sender: Any) {
-        
-        let currUser = FIRAuth.auth()?.currentUser
+        //let currUser = FIRAuth.auth()?.currentUser
         networkingService.updateChildTemp(user: currUser!, temp: self.tempTextField.text!)
-        
     }
     
     

@@ -87,28 +87,36 @@ struct NetworkingService {
     func updateChildBlood(user: FIRUser, rbc: String, wbc: String, anc: String){
         
         let userID = user.uid
-        let childRef = databaseRef.child("children").child(userID)
-        let timeStamp = childRef.child("timestamp")
-        if rbc != "" {
-            timeStamp.child("rbc").setValue(rbc)
-        }
-        if wbc != "" {
-            timeStamp.child("wbc").setValue(wbc)
-        }
-        if anc != "" {
-            timeStamp.child("anc").setValue(anc)
-        }
-       
+        let vitalRef = databaseRef.child("vitals").child(userID).childByAutoId()
         
+        let rbcRef = vitalRef.child("rbc")
+        let wbcRef = vitalRef.child("wbc")
+        let ancRef = vitalRef.child("anc")
+        
+        if rbc != "" {
+            rbcRef.setValue(rbc)
+        }
+
+        if wbc != "" {
+            wbcRef.setValue(wbc)
+        }
+
+        if anc != "" {
+            ancRef.setValue(anc)
+        }
+
         
     }
+    
+    
+    
+    
     func updateChildTemp(user: FIRUser, temp: String){
         let userID = user.uid
-        let childRef = databaseRef.child("children").child(userID)
-        let timeStamp = childRef.child("timestamp")
+        let tempRef = databaseRef.child("temperature").child(userID).childByAutoId()
 
         if temp != "" {
-            timeStamp.child("temp").setValue(temp)
+            tempRef.setValue(temp)
         }
     }
     
@@ -128,10 +136,19 @@ struct NetworkingService {
             events.child("event").setValue(event)
         }
         */
-
-
     }
     
+    func updateMood(user: FIRUser, mood: String){
+        let userID = user.uid
+        let moodRef = databaseRef.child("moods").child(userID)
+        let moodToBeSaved = moodRef.childByAutoId()
+        
+        if mood != "" {
+            moodToBeSaved.setValue(mood)
+        }
+    }
+    
+  
     
     
     

@@ -83,6 +83,8 @@ class OrganizerViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.title = "Planlayıcı"
         self.navigationItem.title = "Planlayıcı"
+        
+        
         database.fetchDict(key: database.uid!, path: "events/"){
             result in
             self.eventsToShow.text = ""
