@@ -156,7 +156,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-M2-Pzh">
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="zLv-M2-Pzh">
                                 <rect key="frame" x="14" y="164" width="347" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Ogb-B9-MCN"/>
@@ -195,7 +195,7 @@
                                     <constraint firstAttribute="width" constant="109" id="4z4-3t-Bh2"/>
                                     <constraint firstAttribute="height" constant="65" id="Ke4-O9-8dq"/>
                                 </constraints>
-                                <state key="normal" title="Kaydet"/>
+                                <state key="normal" title="Ekle"/>
                                 <connections>
                                     <action selector="saveMoodAction:" destination="QOg-8Y-UPa" eventType="touchUpInside" id="U1H-h6-HZj"/>
                                 </connections>
@@ -989,12 +989,68 @@
                     <view key="view" contentMode="scaleToFill" id="7w6-0t-kd2">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Bu uygulama, Koç Üniversitesi öğrencileri tarafından KAÇUV işbirliği ile yapılmıştır." textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="GYs-vN-9AQ">
+                                <rect key="frame" x="16" y="55" width="343" height="128"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Yc9-Gg-JbH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s1k-8H-Ryt">
+                                <rect key="frame" x="16" y="172" width="343" height="133"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="kacuv_logo.jpg"/>
+                                <connections>
+                                    <action selector="toHomePageLink:" destination="zo3-d7-Q3g" eventType="touchUpInside" id="7Hm-9R-6bt"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="KAÇUV Ana Sayfası" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7rv-bE-P8n">
+                                <rect key="frame" x="16" y="109" width="343" height="55"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uIb-Ps-Hjn">
+                                <rect key="frame" x="16" y="324" width="343" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Bağış Yapmak İçin Lütfen Tıklayın"/>
+                                <connections>
+                                    <action selector="toDonateLink:" destination="zo3-d7-Q3g" eventType="touchUpInside" id="xuX-z6-c3e"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgd-uY-N8j">
+                                <rect key="frame" x="16" y="407" width="343" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="İletişim"/>
+                                <connections>
+                                    <action selector="toContactLink:" destination="zo3-d7-Q3g" eventType="touchUpInside" id="08P-wh-RBF"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GYs-vN-9AQ" firstAttribute="top" secondItem="ebL-4h-cZg" secondAttribute="bottom" constant="35" id="9es-t8-dXB"/>
+                            <constraint firstItem="GYs-vN-9AQ" firstAttribute="leading" secondItem="7w6-0t-kd2" secondAttribute="leadingMargin" id="JiH-FJ-Abz"/>
+                            <constraint firstItem="GYs-vN-9AQ" firstAttribute="trailing" secondItem="7w6-0t-kd2" secondAttribute="trailingMargin" id="YD3-Kq-Dds"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="contactButton" destination="vgd-uY-N8j" id="WGQ-Ri-zqB"/>
+                        <outlet property="donateButton" destination="uIb-Ps-Hjn" id="jX9-fC-Gbm"/>
+                        <outlet property="homePageLinkButton" destination="s1k-8H-Ryt" id="G9g-4P-ifq"/>
+                        <outlet property="infoTextView" destination="GYs-vN-9AQ" id="AEB-aH-TRL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YP9-6k-0b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="940" y="4710"/>
+            <point key="canvasLocation" x="940" y="4709.5952023988011"/>
         </scene>
         <!--Logout View Controller-->
         <scene sceneID="Fge-4a-8af">
@@ -1081,7 +1137,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lkF-Ow-5df" id="6r3-yc-nri">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1263,4 +1319,7 @@
             <point key="canvasLocation" x="0.80000000000000004" y="22.938530734632685"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="kacuv_logo.jpg" width="3521" height="1401"/>
+    </resources>
 </document>
