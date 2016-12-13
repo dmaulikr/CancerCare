@@ -78,6 +78,10 @@ class HomePageViewController: UIViewController {
         self.isAddEnabled = false
         self.saveMoodButton.setTitle("Ekle", for: .normal)
         self.moodSlider.isHidden = true
+        // şu anki date'in dönüştürülmüş key'ine bak
+        // eğer key'e ait bir json node'ı yoksa "bugüne dair bir girdi yok"
+        // varsa da oradan çek
+        // çekilen veri hem moodTextLabel hem de moodSlider.value = key.getValue() olarak tanımlayabiliriz
         //
         
         /*

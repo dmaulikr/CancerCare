@@ -16,6 +16,9 @@ struct NetworkingService {
     
     let databaseRef = FIRDatabase.database().reference()
     let storageRef = FIRStorage.storage().reference()
+    let currDate = Date()
+    let formatter = DateFormatter()
+    
     
     private func saveInfo(user: FIRUser!, name: String, surname: String, email: String, password: String){
         //create user info
@@ -104,8 +107,6 @@ struct NetworkingService {
         if anc != "" {
             ancRef.setValue(anc)
         }
-
-        
     }
     
     
@@ -141,18 +142,31 @@ struct NetworkingService {
     func updateMood(user: FIRUser, mood: String){
         let userID = user.uid
         let moodRef = databaseRef.child("moods").child(userID)
-        let moodToBeSaved = moodRef.childByAutoId()
+        // let mainUserID = databaseRef.child("users").child(userID).child(main_uid)
+        // let moodRef2 = databaseRef.child("moods").child(mainUserID)
+        //
+        // do shit
+        let requestedComponents: Set<Calendar.Component> = [
+            .year,
+            .month,
+            .day
+        ]
+        let dateComponents = Calendar.current.dateComponents(requestedComponents, from: currDate)
+        let day = dateComponents.day?.description
+        let month = dateComponents.month?.description
+        let year = dateComponents.year?.description
+        var finalMoodKey = ""
+        finalMoodKey += day!
+        finalMoodKey += month!
+        finalMoodKey += year!
+        // finish shit
+        
+        let moodToBeSaved = moodRef.child(finalMoodKey)
+        // let moodToBeSaved2 = moodRef2.child(finalMoodKey)
+        //let moodToBeSaved = moodRef.childByAutoId()
         
         if mood != "" {
             moodToBeSaved.setValue(mood)
         }
     }
-    
-  
-    
-    
-    
-    
-    
-    
 }
