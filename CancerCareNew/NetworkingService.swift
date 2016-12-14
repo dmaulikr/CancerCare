@@ -32,6 +32,20 @@ struct NetworkingService {
         
         signIn(email: user.email!, password: password)
     }
+
+    private func saveInfo2(user: FIRUser!, name: String, surname: String, email: String, password: String, mainUID: String){
+        //create user info
+        let userInfo = ["email": user.email, "name": name, "surname": surname, "password": password, "uid": user.uid, "main_uid": mainUID]
+        
+        //create user reference
+        let userRef = databaseRef.child("users/secondary_users").child(user.uid)
+        
+        //Save the user info in the database
+        userRef.setValue(userInfo)
+        
+        //signIn(email: user.email!, password: password)
+    }
+    
     
     func signIn(email: String, password: String){
         
@@ -58,6 +72,19 @@ struct NetworkingService {
             }
         })
     }
+    
+    func signUp2(name: String, surname: String, email: String, password: String, mainUID: String){
+        
+        FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user,error) in
+            
+            if error==nil {
+                self.saveInfo2(user: user, name: name, surname: surname, email: email, password: password, mainUID: mainUID)
+            }else {
+                print(error!.localizedDescription)
+            }
+        })
+    }
+    
     
     // name, surname, birthdate, diag, diagdate, treloc, tretype
     
@@ -121,22 +148,15 @@ struct NetworkingService {
         }
     }
     
-    func updateEvents(user: FIRUser, event: String){
+    func updateEvents(user: FIRUser, event: String, date:String, hour:String){
         let userID = user.uid
-        let eventRef = databaseRef.child("events").child(userID) // this will keep all events of the user in the same place. we may or may not want to use this because I cannot anticipate whether this is the better solution
-        let eventToBeSaved = eventRef.childByAutoId()
+        let eventRef = databaseRef.child("events").child(userID) //
+        let keyToBeSet = eventRef.child(date)
+        let eventToBeSaved = keyToBeSet.child(hour)
         
         if event != "" {
             eventToBeSaved.setValue(event)
         }
-        
-        /*
-        let childRef = databaseRef.child("children").child(userID)
-        let events = childRef.child("events")
-        if event != "" {
-            events.child("event").setValue(event)
-        }
-        */
     }
     
     func updateMood(user: FIRUser, mood: String){
