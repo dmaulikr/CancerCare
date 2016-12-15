@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class LogoutViewController: UIViewController {
     var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
@@ -14,11 +15,18 @@ class LogoutViewController: UIViewController {
     @IBOutlet weak var exitQuestionLabel: UILabel!
     @IBOutlet weak var logOutButton: UIButton!
     @IBOutlet weak var cancelLogOutButton: UIButton!
+    
     @IBAction func logoutTap(_ sender: UIButton) {
-        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "loginPage") as! LoginViewController
-        self.present(nextViewController, animated: true)
+        if FIRAuth.auth()?.currentUser != nil {
+            do {
+                try FIRAuth.auth()?.signOut()
+                let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "loginPage") as! LoginViewController
+                self.present(nextViewController, animated: true)
+            } catch let error as NSError {
+                print(error.localizedDescription)
+            }
+        }
     }
-   
     
     @IBAction func cancelLogOutTapped(_ sender: Any) {
         let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "homePage") as! HomePageViewController

@@ -64,7 +64,7 @@ struct NetworkingService {
     func signUp(name: String, surname: String, email: String, password: String){
         
         FIRAuth.auth()?.createUser(withEmail: email, password: password, completion: { (user,error) in
-            
+    
             if error==nil {
                 self.saveInfo(user: user, name: name, surname: surname, email: email, password: password)
             }else {
@@ -83,6 +83,67 @@ struct NetworkingService {
                 print(error!.localizedDescription)
             }
         })
+    }
+    
+    func updateUserInfo(user: FIRUser, name: String, surname: String, oldPassword: String, newPassword: String, confirmNewPassword: String) -> String  {
+        // don't touch anything after there. everthing should be done above
+        // before shit happens
+        
+        let currUserID = user.uid
+        let userRef = databaseRef.child("users").child(currUserID)
+        var currPasswordString = ""
+        var result = ""
+        
+        if name != "" {
+            userRef.child("name").setValue(name)
+        }
+        
+        if surname != "" {
+            userRef.child("surname").setValue(surname)
+        }
+        
+        // that's where shit happens
+        
+        userRef.observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let currPassword = value?["password"] as? String?
+            //currPasswordString = currPassword!! // :D
+            if currPassword! == oldPassword && newPassword == confirmNewPassword && newPassword != "" {
+                user.updatePassword(newPassword, completion: { error in
+                    if error != nil {
+                        print(error?.localizedDescription)
+                        result = (error?.localizedDescription)!
+                    } else {
+                        print("Yeni bilgiler başarıyla güncellendi")
+                        result = "Güncelleme Başarılı!"
+                        userRef.child("password").setValue(newPassword)
+                    }
+                })
+            }
+        }) { (error) in
+            print(error.localizedDescription)
+            result = error.localizedDescription
+        }
+        
+ 
+        // after shit happens
+        /*
+        if currPasswordString == oldPassword && newPassword == confirmNewPassword && newPassword != "" {
+            user.updatePassword(newPassword, completion: { error in
+                if error != nil {
+                    print(error?.localizedDescription)
+                    result = (error?.localizedDescription)!
+                } else {
+                    print("Yeni bilgiler başarıyla güncellendi")
+                    result = "Güncelleme Başarılı!"
+                    userRef.child("password").setValue(newPassword)
+                }
+            })
+        }
+        */
+        
+        // post-apocalypse
+        return result
     }
     
     
