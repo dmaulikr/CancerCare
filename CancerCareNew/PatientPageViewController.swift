@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseAuth
 
 class PatientPageViewController: UIViewController {
     @IBOutlet weak var nameTextField: UILabel!
@@ -20,12 +22,39 @@ class PatientPageViewController: UIViewController {
     @IBOutlet weak var doctorInfoButton: UIButton!
     @IBOutlet weak var doctorNameTextField: UITextField!
     var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
+    let databaseRef = FIRDatabase.database().reference()
+    let storageRef = FIRStorage.storage().reference()
+    let networkingService = NetworkingService()
+    let currUser = FIRAuth.auth()?.currentUser
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.title = "Çocuğum"
         self.navigationItem.title = self.navigationController?.title
-
+        
+        let currUserID = currUser?.uid
+        databaseRef.child("children").child(currUserID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let name = value?["name"] as? String?
+            let surname = value?["surname"] as? String?
+            let birthDate = value?["birthDate"] as? String?
+            let diagnosis = value?["diagnosis"] as? String?
+            let diagnosisDate = value?["diagnosisDate"] as? String?
+            let treatmentLocation = value?["treatmentLocation"] as? String?
+            let treatmentType = value?["treatmentType"] as? String?
+            
+            self.nameTextField.text = name!
+            self.surnameTextField.text = surname!
+            self.birthdateTextField.text = birthDate!
+            self.diagnosisTextField.text = diagnosis!
+            self.diagnosisDateTextField.text = diagnosisDate!
+            self.treatmentLocation.text = treatmentLocation!
+            self.treatmentType.text = treatmentType!
+        }) { (error) in
+            print(error.localizedDescription)
+        }
+        
         // Do any additional setup after loading the view.
     }
 

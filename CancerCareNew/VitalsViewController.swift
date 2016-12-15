@@ -12,40 +12,19 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
-class VitalsViewController: UIViewController {
+class VitalsViewController: UIViewController, UIPopoverPresentationControllerDelegate {
+    
+    //let currUser = FIRAuth.auth()?.currentUser
+    //let networkingService = NetworkingService()
+    @IBOutlet weak var addBloodCountButton: UIButton!
+    @IBOutlet weak var addTempCountButton: UIButton!
 
-    
-    @IBOutlet weak var rbcTextField: UITextField!
-    @IBOutlet weak var wbcTextField: UITextField!
-    @IBOutlet weak var ancTextField: UITextField!
-    
-    @IBOutlet weak var tempTextField: UITextField!
-    
-    let currUser = FIRAuth.auth()?.currentUser
-    
-    let networkingService = NetworkingService()
-    
-    @IBAction func addBloodButtonTapped(_ sender: Any) {
-        // do stuff
-        //let currUser = FIRAuth.auth()?.currentUser
-        //let currUserID = currUser?.uid
-        //let childRef = databaseRef.child("children").child(currUserID!)
-        // childRef.child("childName").setValue(editNameTextfield.text)
-        networkingService.updateChildBlood(user: currUser!, rbc: self.rbcTextField.text!, wbc: self.wbcTextField.text!, anc: self.ancTextField.text!)
-    }
-    
-    @IBAction func addTempButtonTapped(_ sender: Any) {
-        //let currUser = FIRAuth.auth()?.currentUser
-        networkingService.updateChildTemp(user: currUser!, temp: self.tempTextField.text!)
-    }
-    
+  
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.title = "Sağlık Değerleri"
         self.navigationItem.title = self.navigationController?.title
-
-
         // Do any additional setup after loading the view.
     }
 
@@ -54,7 +33,30 @@ class VitalsViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func addBloodButtonAction(_ sender: Any) {
+        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "bloodPopUp")
+        popController.modalPresentationStyle = UIModalPresentationStyle.popover
+        popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
+        popController.popoverPresentationController?.delegate = self
+        popController.popoverPresentationController?.sourceView = sender as! UIView
+        popController.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
+        self.present(popController, animated: true, completion: nil)
+    }
 
+    @IBAction func addTempButtonAction(_ sender: Any) {
+        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tempPopUp")
+        popController.modalPresentationStyle = UIModalPresentationStyle.popover
+        popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
+        popController.popoverPresentationController?.delegate = self
+        popController.popoverPresentationController?.sourceView = sender as! UIView
+        popController.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
+        self.present(popController, animated: true, completion: nil)
+    }
+    
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        return UIModalPresentationStyle.none
+    }
+    
     /*
     // MARK: - Navigation
 

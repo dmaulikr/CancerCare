@@ -29,6 +29,8 @@
 		9943A3CC1DE91D1400F95141 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9943A3CB1DE91D1400F95141 /* GoogleService-Info.plist */; };
 		9943A3CE1DE91DD100F95141 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943A3CD1DE91DD100F95141 /* LoginViewController.swift */; };
 		9943A3D01DE9250A00F95141 /* HomePageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9943A3CF1DE9250A00F95141 /* HomePageViewController.swift */; };
+		998398E81E02039C00C8963C /* BloodPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998398E71E02039C00C8963C /* BloodPopUpViewController.swift */; };
+		998398EE1E0214C200C8963C /* TempPopUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998398ED1E0214C200C8963C /* TempPopUpViewController.swift */; };
 		9994F8AD1DFA00DB0082BD24 /* DatabaseAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9994F8AC1DFA00DB0082BD24 /* DatabaseAdapter.swift */; };
 		999D86A31E0072A200A0DE4D /* kac3a7uv.png in Resources */ = {isa = PBXBuildFile; fileRef = 999D86A21E0072A200A0DE4D /* kac3a7uv.png */; };
 		999D86A51E0073FC00A0DE4D /* kacuv_logo.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 999D86A41E0073FC00A0DE4D /* kacuv_logo.jpg */; };
@@ -88,6 +90,8 @@
 		9943A3CB1DE91D1400F95141 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9943A3CD1DE91DD100F95141 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9943A3CF1DE9250A00F95141 /* HomePageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageViewController.swift; sourceTree = "<group>"; };
+		998398E71E02039C00C8963C /* BloodPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BloodPopUpViewController.swift; sourceTree = "<group>"; };
+		998398ED1E0214C200C8963C /* TempPopUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TempPopUpViewController.swift; sourceTree = "<group>"; };
 		9994F8AC1DFA00DB0082BD24 /* DatabaseAdapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DatabaseAdapter.swift; sourceTree = "<group>"; };
 		999D86A21E0072A200A0DE4D /* kac3a7uv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = kac3a7uv.png; sourceTree = "<group>"; };
 		999D86A41E0073FC00A0DE4D /* kacuv_logo.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kacuv_logo.jpg; sourceTree = "<group>"; };
@@ -177,6 +181,8 @@
 				105244F11DEA12B9008B5FF0 /* LogoutViewController.swift */,
 				98599ED11DEA51C9003DAB0C /* EditPatientInfoViewController.swift */,
 				9994F8AC1DFA00DB0082BD24 /* DatabaseAdapter.swift */,
+				998398E71E02039C00C8963C /* BloodPopUpViewController.swift */,
+				998398ED1E0214C200C8963C /* TempPopUpViewController.swift */,
 			);
 			path = CancerCareNew;
 			sourceTree = "<group>";
@@ -515,7 +521,9 @@
 				98599ED21DEA51C9003DAB0C /* EditPatientInfoViewController.swift in Sources */,
 				105244E61DEA11F0008B5FF0 /* PatientPageViewController.swift in Sources */,
 				9943A3D01DE9250A00F95141 /* HomePageViewController.swift in Sources */,
+				998398EE1E0214C200C8963C /* TempPopUpViewController.swift in Sources */,
 				102280B21DE8A74500D9F21A /* NetworkingService.swift in Sources */,
+				998398E81E02039C00C8963C /* BloodPopUpViewController.swift in Sources */,
 				10C18AA81DE899E3000AE6E1 /* RegisterPageViewController.swift in Sources */,
 				105244E41DEA0654008B5FF0 /* MenuTableViewController.swift in Sources */,
 				9994F8AD1DFA00DB0082BD24 /* DatabaseAdapter.swift in Sources */,
