@@ -25,11 +25,11 @@ class DatabaseAdapter {
     }
     
     
-    func fetchDict(key: String, path: String, completion: @escaping ([String:AnyObject]) -> Void){
+    func fetchDict(key: Any, path: String, completion: @escaping ([String:AnyObject]) -> Void){
         self.fetchDict(key: key, orderBy: nil, path: path, completion: completion)
     }
     
-    func fetchDict(key: String, orderBy: String?, path: String, completion: @escaping ([String:AnyObject]) -> Void){
+    func fetchDict(key: Any, orderBy: String?, path: String, completion: @escaping ([String:AnyObject]) -> Void){
         var result: [String:String] = [:]
         var ref: FIRDatabaseQuery
         

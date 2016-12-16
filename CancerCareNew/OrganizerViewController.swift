@@ -30,7 +30,7 @@ class OrganizerViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    /*
+    
     func getEventDate() -> String {
     let currentDateTime = Date()
 
@@ -45,7 +45,7 @@ class OrganizerViewController: UIViewController {
     let dateString = dayString + monthString + yearString
     return dateString
     }
-    */
+    
     
         @IBAction func addEventButtonTapped(_ sender: Any)  {
         let title = eventTextField.text

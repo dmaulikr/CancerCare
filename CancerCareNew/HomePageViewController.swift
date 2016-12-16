@@ -29,6 +29,8 @@ class HomePageViewController: UIViewController {
     var isAddEnabled = false
     var result = ""
     
+    let database = DatabaseAdapter()
+    
 
     
     @IBOutlet weak var menuButton: UIButton!
@@ -77,13 +79,16 @@ class HomePageViewController: UIViewController {
         super.viewDidLoad()
         self.navigationController?.title = "Ana Sayfa"
         self.navigationItem.title = self.navigationController?.title
-        moodTextLabel.text = Int(moodSlider.value).description
+        moodTextLabel.text = "Mood bilgisi yükleniyor...⌛️"
         // moodSlider stuff
         self.isAddEnabled = false
         self.saveMoodButton.setTitle("Ekle", for: .normal)
         self.moodSlider.isHidden = true
         eventLabel.text = "16.12.2016 - 18:00 KAÇUV'la görüşme"
         
+         displayCurrentMood(){r in
+            self.moodTextLabel.text = r
+        }
         // displayCurrMood()
         
         
@@ -117,6 +122,22 @@ class HomePageViewController: UIViewController {
         //eventLabel.text =
         */
         // Do any additional setup after loading the view.
+    }
+    
+    func displayCurrentMood(completion: @escaping (String)->Void){
+        let currDateKey = "15122016"
+        let currUserID = FIRAuth.auth()?.currentUser?.uid
+        var result = ""
+        
+        database.fetchDict(key: "\(currUserID!)", path: "moods/"){ resultt in
+            
+            for k in resultt {
+                if (k.key == currDateKey){
+                    result = "Çocuğumun bugünkü mood'u \(k.value)"
+                }
+            }
+            completion(result)
+        }
     }
 
     override func didReceiveMemoryWarning() {
