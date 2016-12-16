@@ -20,6 +20,7 @@ class MenuTableViewController: UITableViewController
         self.identities = ["homePage", "patientPage", "organizerPage", "vitalsPage", "myAccountPage", "secondaryAccountPage", "aboutPage", "logoutPage"]
         
         self.prefersStatusBarHidden
+        //self.tableView.backgroundColor = UIColor.lightGray
     }
     
     override var prefersStatusBarHidden: Bool {
@@ -36,6 +37,7 @@ class MenuTableViewController: UITableViewController
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")
         
         cell?.textLabel?.text = self.pageNames[indexPath.row]
+        cell?.backgroundColor = UIColor.clear
         
         return cell!
     }
@@ -47,6 +49,10 @@ class MenuTableViewController: UITableViewController
         self.navigationController?.pushViewController(viewController!, animated: true)
     }
     
-    
+    /*
+    override func tableView(_ tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: IndexPath) {
+        cell.backgroundColor = UIColor.clear
+    }
+    */
     
 }

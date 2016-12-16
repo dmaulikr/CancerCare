@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Im-0d-lJZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Im-0d-lJZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -59,7 +59,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WtF-bw-zWZ">
                                 <rect key="frame" x="143" y="363" width="88" height="30"/>
-                                <color key="backgroundColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="1" green="0.70980392156862748" blue="0.078431372549019607" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Kaydol">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -75,7 +75,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oWZ-wm-jko">
                                 <rect key="frame" x="143" y="242" width="88" height="30"/>
-                                <color key="backgroundColor" red="0.18348177916181732" green="0.32283761124259303" blue="0.74318152654712044" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="HoL-gJ-c2J"/>
                                 </constraints>
@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Wmp-w0-Vzl" firstAttribute="leading" secondItem="IHH-bg-PAQ" secondAttribute="leading" id="3S6-eH-Jdt"/>
                             <constraint firstItem="3sM-y9-t5W" firstAttribute="centerX" secondItem="oWZ-wm-jko" secondAttribute="centerX" id="3oE-Tg-GB3"/>
@@ -139,10 +139,13 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I18-PU-Dta">
                                 <rect key="frame" x="16" y="27" width="46" height="30"/>
+                                <color key="backgroundColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="46" id="jKb-Zp-Tb6"/>
                                 </constraints>
-                                <state key="normal" title="Menü"/>
+                                <state key="normal" title="Menü">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <segue destination="7K2-f5-llS" kind="presentation" id="Qwa-Xm-tuM"/>
                                 </connections>
@@ -176,11 +179,14 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CFy-xM-vEL">
                                 <rect key="frame" x="140.5" y="275" width="94" height="65"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="Vwn-hh-LWk"/>
                                     <constraint firstAttribute="width" constant="94" id="ybF-0a-pye"/>
                                 </constraints>
-                                <state key="normal" title="Ekle"/>
+                                <state key="normal" title="Ekle">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="saveMoodAction:" destination="QOg-8Y-UPa" eventType="touchUpInside" id="U1H-h6-HZj"/>
                                 </connections>
@@ -192,7 +198,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zLv-M2-Pzh" firstAttribute="top" secondItem="XYv-qK-87Z" secondAttribute="bottom" constant="31" id="0fd-bk-SMu"/>
                             <constraint firstItem="GAs-7G-vaZ" firstAttribute="trailing" secondItem="adA-xR-QAb" secondAttribute="trailing" id="17m-Rs-8AF"/>
@@ -368,8 +374,10 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Ek-nE-kgq">
                                 <rect key="frame" x="16" y="407" width="343" height="69"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Düzenle"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Düzenle">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="editPatientInfoButtonAction:" destination="psk-D0-z5W" eventType="touchUpInside" id="ZGJ-eH-YjP"/>
                                 </connections>
@@ -383,7 +391,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qvE-fm-IQ7" firstAttribute="top" secondItem="tad-Zd-GTn" secondAttribute="bottom" constant="8" symbolic="YES" id="0o9-aB-f2C"/>
                             <constraint firstItem="zmQ-YK-oN1" firstAttribute="trailing" secondItem="f6g-Jq-C1n" secondAttribute="trailing" id="22k-Xr-bgw"/>
@@ -565,25 +573,29 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFL-sC-Pn6">
                                 <rect key="frame" x="16" y="504" width="343" height="65"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="65" id="a4a-0s-f1H"/>
                                 </constraints>
-                                <state key="normal" title="Onayla"/>
+                                <state key="normal" title="Onayla">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="confirmPatientInfoButtonAction:" destination="Xtp-Uz-jjE" eventType="touchUpInside" id="zKw-7Y-Px8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ire-g6-dt1">
                                 <rect key="frame" x="16" y="577" width="343" height="65"/>
-                                <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Vazgeç"/>
+                                <color key="backgroundColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Vazgeç">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="cancelPatientInfoButtonAction:" destination="Xtp-Uz-jjE" eventType="touchUpInside" id="M3E-t9-P80"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Llq-LE-Ft5" firstAttribute="top" secondItem="I1W-bD-W5B" secondAttribute="bottom" constant="14" id="05l-R9-Vo2"/>
                             <constraint firstItem="I1W-bD-W5B" firstAttribute="leading" secondItem="Llq-LE-Ft5" secondAttribute="leading" id="29J-NK-YqV"/>
@@ -723,17 +735,20 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5nq-9O-5uO">
                                 <rect key="frame" x="119" y="353" width="120" height="30"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="eIF-aD-DMA"/>
                                     <constraint firstAttribute="width" constant="120" id="hf4-Su-WEV"/>
                                 </constraints>
-                                <state key="normal" title="Yeni etkinlik ekle"/>
+                                <state key="normal" title="Yeni etkinlik ekle">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="addEventButtonTapped:" destination="98g-wZ-Fdy" eventType="touchUpInside" id="B3m-z9-SW1"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="pzQ-c3-4KA" firstAttribute="trailing" secondItem="rfb-OR-az2" secondAttribute="trailing" id="2NF-5U-Xpq"/>
                             <constraint firstItem="rfb-OR-az2" firstAttribute="centerX" secondItem="CVK-xS-AU2" secondAttribute="centerX" id="3RR-sr-okn"/>
@@ -794,20 +809,26 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mJq-TS-qTV">
                                 <rect key="frame" x="292" y="70" width="67" height="30"/>
+                                <color key="backgroundColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lGE-KT-Io1"/>
                                     <constraint firstAttribute="width" constant="67" id="oR9-VZ-qcS"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="addBloodButtonAction:" destination="0BO-fG-E1b" eventType="touchUpInside" id="0QV-4Z-Apn"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Psw-YL-QWX">
                                 <rect key="frame" x="292" y="111" width="67" height="39"/>
+                                <color key="backgroundColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="addTempButtonAction:" destination="0BO-fG-E1b" eventType="touchUpInside" id="J4N-8B-Fb0"/>
                                 </connections>
@@ -818,16 +839,19 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCm-8j-hL6">
-                                <rect key="frame" x="310.5" y="175" width="30" height="39"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jCm-8j-hL6">
+                                <rect key="frame" x="292" y="175" width="67" height="39"/>
+                                <color key="backgroundColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="+"/>
+                                <state key="normal" title="+">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="addReportButtonAction:" destination="0BO-fG-E1b" eventType="touchUpInside" id="6sd-pT-13I"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Psw-YL-QWX" firstAttribute="leading" secondItem="mJq-TS-qTV" secondAttribute="leading" id="25m-5c-NPa"/>
                             <constraint firstItem="jCm-8j-hL6" firstAttribute="centerX" secondItem="Psw-YL-QWX" secondAttribute="centerX" id="5Oh-PO-Ox7"/>
@@ -874,27 +898,24 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RBC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Cc-al-J0t">
                                         <rect key="frame" x="8" y="241" width="97" height="56"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="IgP-nR-JZc"/>
                                             <constraint firstAttribute="width" constant="97" id="cgR-kW-TML"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="WBC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3jV-3s-1vF">
                                         <rect key="frame" x="8" y="305" width="97" height="56"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ANC" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wny-ah-oyH">
                                         <rect key="frame" x="8" y="369" width="97" height="56"/>
-                                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oPQ-qA-aY3">
@@ -917,10 +938,13 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UEh-3U-EPX">
                                         <rect key="frame" x="113" y="420" width="148" height="56"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="0gU-9y-3Vp"/>
                                         </constraints>
-                                        <state key="normal" title="Kaydet"/>
+                                        <state key="normal" title="Kaydet">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="saveBloodButtonAction:" destination="caU-Rs-fZ6" eventType="touchUpInside" id="AXr-PI-EAD"/>
                                         </connections>
@@ -1005,11 +1029,14 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xf5-CY-gME">
                                         <rect key="frame" x="113" y="356.5" width="70" height="56"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="56" id="sbV-F4-a0Z"/>
                                             <constraint firstAttribute="width" constant="70" id="vwg-kO-ScV"/>
                                         </constraints>
-                                        <state key="normal" title="Kaydet"/>
+                                        <state key="normal" title="Kaydet">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="saveTempButtonAction:" destination="Dke-o2-9PM" eventType="touchUpInside" id="nVT-ym-CHL"/>
                                         </connections>
@@ -1061,20 +1088,26 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3bX-vY-d9f">
                                         <rect key="frame" x="86" y="194" width="179" height="30"/>
-                                        <state key="normal" title="Fotoğraf Albümünden Seç"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Fotoğraf Albümünden Seç">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="photoFromLibraryButtonAction:" destination="1fJ-6I-V39" eventType="touchUpInside" id="i09-Jr-gJk"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeF-7i-Tgu">
                                         <rect key="frame" x="114" y="380" width="122" height="30"/>
-                                        <state key="normal" title="Yeni Fotoğraf Çek"/>
+                                        <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Yeni Fotoğraf Çek">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
                                         <connections>
                                             <action selector="cameraButtonAction:" destination="1fJ-6I-V39" eventType="touchUpInside" id="pEF-Rj-9z9"/>
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="ZeF-7i-Tgu" secondAttribute="bottom" constant="257" id="9tY-6f-DzA"/>
                                     <constraint firstItem="ZeF-7i-Tgu" firstAttribute="centerX" secondItem="3bX-vY-d9f" secondAttribute="centerX" id="BQq-P0-JUh"/>
@@ -1189,27 +1222,33 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nI-O9-KVL">
                                 <rect key="frame" x="16" y="452" width="88" height="56"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="Dgf-w6-Zbg"/>
                                     <constraint firstAttribute="width" constant="88" id="q9X-4K-QdD"/>
                                 </constraints>
-                                <state key="normal" title="Kaydet"/>
+                                <state key="normal" title="Kaydet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="saveButtonAction:" destination="hZA-gx-j5c" eventType="touchUpInside" id="nc1-6Z-RNh"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fVm-6G-Gd7">
                                 <rect key="frame" x="271" y="452" width="88" height="56"/>
+                                <color key="backgroundColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="yGW-Oq-f4i"/>
                                 </constraints>
-                                <state key="normal" title="Vazgeç"/>
+                                <state key="normal" title="Vazgeç">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="cancelButtonAction:" destination="hZA-gx-j5c" eventType="touchUpInside" id="Vdi-mx-brP"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="5f8-pS-VEf" firstAttribute="top" secondItem="1mZ-qc-DXm" secondAttribute="bottom" constant="8" symbolic="YES" id="0f4-RE-gEf"/>
                             <constraint firstItem="iDE-9J-s4V" firstAttribute="trailing" secondItem="Wve-Fx-FdM" secondAttribute="trailing" id="3lC-7o-zt0"/>
@@ -1348,7 +1387,10 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AHB-hu-0zr">
                                 <rect key="frame" x="16" y="409" width="343" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="İkincil Hesap Kaydını Tamamla"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="İkincil Hesap Kaydını Tamamla">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="createSecondaryAccount:" destination="R40-9i-QCt" eventType="touchUpInside" id="ARq-FO-o56"/>
                                 </connections>
@@ -1356,13 +1398,16 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zHP-xB-Cms">
                                 <rect key="frame" x="16" y="473" width="343" height="56"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Vazgeç"/>
+                                <color key="backgroundColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Vazgeç">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="cancelRegistration:" destination="R40-9i-QCt" eventType="touchUpInside" id="ZXn-Ai-wJa"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
                     <connections>
                         <outlet property="cancelButton" destination="zHP-xB-Cms" id="1Xv-LG-rdf"/>
@@ -1439,7 +1484,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7rv-bE-P8n" firstAttribute="top" secondItem="GYs-vN-9AQ" secondAttribute="bottom" constant="8" symbolic="YES" id="1l5-u7-Wv2"/>
                             <constraint firstItem="uIb-Ps-Hjn" firstAttribute="top" secondItem="s1k-8H-Ryt" secondAttribute="bottom" constant="19" id="2sE-g3-Ynw"/>
@@ -1490,20 +1535,26 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJe-pp-N1t">
                                 <rect key="frame" x="16" y="267" width="343" height="30"/>
-                                <state key="normal" title="Evet"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.59215686270000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Evet">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="logoutTap:" destination="IhE-5b-eux" eventType="touchUpInside" id="JuT-ot-VK2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnm-HO-r4D">
                                 <rect key="frame" x="16" y="305" width="343" height="30"/>
-                                <state key="normal" title="Ana sayfaya geri dön"/>
+                                <color key="backgroundColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Ana sayfaya geri dön">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="cancelLogOutTapped:" destination="IhE-5b-eux" eventType="touchUpInside" id="3PJ-J9-sN1"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="qjD-Ho-2vu" firstAttribute="trailing" secondItem="TJe-pp-N1t" secondAttribute="trailing" id="1yH-WG-0rf"/>
                             <constraint firstItem="TJe-pp-N1t" firstAttribute="top" secondItem="qjD-Ho-2vu" secondAttribute="bottom" constant="8" symbolic="YES" id="M8g-Sh-02S"/>
@@ -1555,7 +1606,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lkF-Ow-5df" id="6r3-yc-nri">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -1645,7 +1696,7 @@
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jgW-b5-Zac">
                                 <rect key="frame" x="143" y="445" width="88" height="30"/>
-                                <color key="backgroundColor" red="0.1834817792" green="0.32283761119999999" blue="0.74318152650000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.098039215686274508" green="0.098039215686274508" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="88" id="B28-dK-hsQ"/>
                                 </constraints>
@@ -1658,15 +1709,16 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lq4-b4-bG7">
                                 <rect key="frame" x="143" y="508" width="88" height="30"/>
+                                <color key="backgroundColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Vazgeç">
-                                    <color key="titleColor" red="0.98666487069999997" green="0.71004849140000004" blue="0.07893318966" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="cancelButtonAction:" destination="HU6-zf-Rlh" eventType="touchUpInside" id="Z5E-9h-OK4"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fkN-cc-hm1" firstAttribute="leading" secondItem="J5K-bT-0VE" secondAttribute="leading" id="0LT-bM-kjI"/>
                             <constraint firstItem="9yW-LW-IGA" firstAttribute="trailing" secondItem="2H9-EY-15w" secondAttribute="trailing" id="2Bc-9C-Mb3"/>

@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 
 class OrganizerViewController: UIViewController {
+
     
     var savedEvent : String = ""
     
@@ -29,9 +30,24 @@ class OrganizerViewController: UIViewController {
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
+    /*
+    func getEventDate() -> String {
+    let currentDateTime = Date()
+
+    //let title = eventTextField.text
+    let formatter = DateFormatter()
+    formatter.dateFormat = "dd"
+    let dayString = formatter.string(from: datePicker.date)
+    formatter.dateFormat = "MM"
+    let monthString = formatter.string(from: datePicker.date)
+    formatter.dateFormat = "yyyy"
+    let yearString = formatter.string(from: datePicker.date)
+    let dateString = dayString + monthString + yearString
+    return dateString
+    }
+    */
     
-    
-        @IBAction func addEventButtonTapped(_ sender: Any) {
+        @IBAction func addEventButtonTapped(_ sender: Any)  {
         let title = eventTextField.text
         let formatter = DateFormatter()
         formatter.dateFormat = "dd"

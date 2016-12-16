@@ -147,128 +147,64 @@ struct NetworkingService {
     func updateUserInfo(userRef: FIRDatabaseReference, name: String, surname: String, oldPassword: String, newPassword: String, confirmNewPassword: String) -> Int {
         
         let currUser = FIRAuth.auth()?.currentUser
-        
-        
-        
         //var userRef = databaseRef.child("users").child(currUserID)
-        
         /*
-         
          if isSecondaryUser(user: user) {
-         
          userRef = databaseRef.child("users/secondary_users").child(currUserID)
-         
          }
-         
          */
-        
-        
-        
         var result = 0
-        
         if name != "" {
-            
             userRef.child("name").setValue(name)
-            
         }
         
         
         if surname != "" {
-            
             userRef.child("surname").setValue(surname)
-            
         }
-        
-        
-        
         userRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            
             let value = snapshot.value as? NSDictionary
-            
             let currPassword = value?["password"] as? String?
-            
             //currPasswordString = currPassword!! // :D
-            
             if currPassword! == oldPassword && newPassword == confirmNewPassword && newPassword != "" {
-                
                 currUser?.updatePassword(newPassword, completion: { error in
-                    
                     if error != nil {
-                        
                         result = -1
-                        
                         return
-                            
                             print(error?.localizedDescription)
-                        
                     } else {
-                        
                         print("Yeni bilgiler başarıyla güncellendi")
-                        
                         result = 1
-                        
                         userRef.child("password").setValue(newPassword)
-                        
                         return
-                        
                     }
-                    
                 })
-                
             }
-            
         }) { (error) in
-            
             print(error.localizedDescription)
-            
             result = -1
-            
             return
-            
         }
-        
         return result
-        
     }
-    
-    
-    
-    
     
     // name, surname, birthdate, diag, diagdate, treloc, tretype
     
-    
-    
     func updateChildInfo(user: FIRUser, name: String, surname: String, birthDate: String, diagnosis: String, diagnosisDate: String, treatmentLocation: String, treatmentType: String){
-        
         let userID = user.uid
-        
         let childRef = databaseRef.child("children").child(userID)
-        
         if name != "" {
-            
             childRef.child("name").setValue(name)
-            
         }
-        
         if surname != "" {
-            
             childRef.child("surname").setValue(surname)
-            
         }
-        
         if birthDate != "" {
-            
             childRef.child("birthDate").setValue(birthDate)
-            
         }
-        
         if diagnosis != "" {
-            
             childRef.child("diagnosis").setValue(diagnosis)
-            
         }
-        
         if diagnosisDate != "" {
             
             childRef.child("diagnosisDate").setValue(diagnosisDate)
@@ -379,7 +315,7 @@ struct NetworkingService {
         
     }
     
-    
+    // Mood functions
     
     func updateMood(user: FIRUser, mood: String){
         
@@ -436,9 +372,16 @@ struct NetworkingService {
         if mood != "" {
             
             moodToBeSaved.setValue(mood)
-            
         }
-        
     }
+    
+    func setMoodRefWithID (moodRefWithID: FIRDatabaseReference){
+        //
+    }
+    
+    func setMoodValue(message: String){
+        //
+    }
+        
     
 }

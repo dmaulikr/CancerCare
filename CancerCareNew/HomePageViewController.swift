@@ -18,13 +18,17 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var eventLabel: UILabel!
     @IBOutlet weak var moodTextLabel: UILabel!
     @IBOutlet weak var saveMoodButton: UIButton!
-    
+    let user = User()
+    let organizer = OrganizerViewController()
+
     
     let databaseRef = FIRDatabase.database().reference()
     let storageRef = FIRStorage.storage().reference()
     let networkingService = NetworkingService()
     let currUser = FIRAuth.auth()?.currentUser
     var isAddEnabled = false
+    var result = ""
+    
 
     
     @IBOutlet weak var menuButton: UIButton!
@@ -78,6 +82,28 @@ class HomePageViewController: UIViewController {
         self.isAddEnabled = false
         self.saveMoodButton.setTitle("Ekle", for: .normal)
         self.moodSlider.isHidden = true
+        eventLabel.text = "16.12.2016 - 18:00 KAÇUV'la görüşme"
+        
+        // displayCurrMood()
+        
+        
+        
+        /*
+        databaseRef.child("events").child(currUserID!).observeSingleEvent(of: .value, with: { (snapshot) in
+            let value = snapshot.value as? NSDictionary
+            let eventTitle = value?[self.organizer.getEventDate()] as? String?
+            
+            if (self.organizer.getEventDate() == self.user.getUserDate()){
+                
+                self.eventLabel.text = eventTitle!
+            } else{
+                self.eventLabel.text = "Bugün için etkinliğiniz yok."
+            }
+            }) { (error) in
+            print(error.localizedDescription)
+        }
+        */
+        
         // şu anki date'in dönüştürülmüş key'ine bak
         // eğer key'e ait bir json node'ı yoksa "bugüne dair bir girdi yok"
         // varsa da oradan çek
@@ -97,6 +123,14 @@ class HomePageViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    /*
+    func displayCurrMood(){
+        let moodRef = databaseRef.child("moods")
+        user.setCurrMood0(moodRef: moodRef, currUser: currUser!)
+        moodTextLabel.text = ""
+    }
+    */
     
     /*
     @IBAction func menuButtonAction(_ sender: Any) {
