@@ -18,7 +18,7 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
     //let networkingService = NetworkingService()
     @IBOutlet weak var addBloodCountButton: UIButton!
     @IBOutlet weak var addTempCountButton: UIButton!
-
+    @IBOutlet weak var addReportButton: UIButton!
   
     
     override func viewDidLoad() {
@@ -53,9 +53,22 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
         self.present(popController, animated: true, completion: nil)
     }
     
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+    @IBAction func addReportButtonAction(_ sender: Any) {
+        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "reportPopUp")
+        popController.modalPresentationStyle = UIModalPresentationStyle.popover
+        popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
+        popController.popoverPresentationController?.delegate = self
+        popController.popoverPresentationController?.sourceView = sender as! UIView
+        popController.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
+        self.present(popController, animated: true, completion: nil)
+      
+    }
+    
+        func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
         return UIModalPresentationStyle.none
     }
+    
+    
     
     /*
     // MARK: - Navigation

@@ -22,14 +22,16 @@ class OrganizerViewController: UIViewController {
 
     let currUser = FIRAuth.auth()?.currentUser
     
-    
+       
     @IBOutlet weak var eventsToShow: UITextView!
     
     @IBOutlet weak var eventTextField: UITextField!
     
     @IBOutlet weak var datePicker: UIDatePicker!
     
-    @IBAction func addEventButtonTapped(_ sender: Any) {
+    
+    
+        @IBAction func addEventButtonTapped(_ sender: Any) {
         let title = eventTextField.text
         let formatter = DateFormatter()
         formatter.dateFormat = "dd"

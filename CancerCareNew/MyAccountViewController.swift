@@ -19,6 +19,7 @@ class MyAccountViewController: UIViewController {
     @IBOutlet weak var cancelButton: UIButton!
     let networkingService = NetworkingService()
     let currUser = FIRAuth.auth()?.currentUser
+    let user = User()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,20 +35,7 @@ class MyAccountViewController: UIViewController {
     }
 
     @IBAction func saveButtonAction(_ sender: Any) {
-        let toBeDisplayed = networkingService.updateUserInfo(user: currUser!, name: nameTextField.text!, surname: surnameTextField.text!, oldPassword: oldPasswordTextField.text!, newPassword: newPasswordTextField.text!, confirmNewPassword: confirmNewPasswordTextField.text!)
-        
-        let alertController = UIAlertController(title: "", message: toBeDisplayed, preferredStyle: UIAlertControllerStyle.alert)
-        let defaultAction = UIAlertAction(title: "Tamam", style: UIAlertActionStyle.default)
-        {
-            (UIAlertAction) -> Void in
-        }
-        
-        alertController.addAction(defaultAction)
-        self.present(alertController, animated: true)
-        {
-            () ->  Void in
-        }
-        
+       user.update(name: nameTextField.text!, surname: surnameTextField.text!, password: oldPasswordTextField.text!, newPassword: newPasswordTextField.text!, confirmNewPassword: confirmNewPasswordTextField.text!)
     }
     
     @IBAction func cancelButtonAction(_ sender: Any) {

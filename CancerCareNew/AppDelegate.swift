@@ -90,6 +90,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    func dateComponentFromNSDate(date: NSDate)-> NSDateComponents{
+        
+        let calendarUnit = Set<Calendar.Component>([.hour, .day, .month, .year])
+        let dateComponents = NSCalendar.current.dateComponents(calendarUnit, from: date as Date)
+        return dateComponents as NSDateComponents
+    }
+    
 }
 
