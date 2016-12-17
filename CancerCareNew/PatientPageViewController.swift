@@ -19,8 +19,8 @@ class PatientPageViewController: UIViewController {
     @IBOutlet weak var treatmentLocation: UILabel!
     @IBOutlet weak var treatmentType: UILabel!
     @IBOutlet weak var editPatientInfoButton: UIButton!
-    @IBOutlet weak var doctorInfoButton: UIButton!
-    @IBOutlet weak var doctorNameTextField: UITextField!
+    
+   
     var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
     let databaseRef = FIRDatabase.database().reference()
     let storageRef = FIRStorage.storage().reference()
@@ -65,7 +65,7 @@ class PatientPageViewController: UIViewController {
     
     @IBAction func editPatientInfoButtonAction(_ sender: Any) {
         let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "editPatientInfoPage") as! EditPatientInfoViewController
-        self.navigationController!.pushViewController(nextViewController, animated: true)
+    self.navigationController!.pushViewController(nextViewController, animated: true)
     }
     
     @IBAction func doctorInfoButtonAction(_ sender: Any) {

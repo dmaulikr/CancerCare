@@ -25,6 +25,10 @@
 		10C18A8F1DE88F84000AE6E1 /* CancerCareNewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18A8E1DE88F84000AE6E1 /* CancerCareNewTests.swift */; };
 		10C18A9A1DE88F84000AE6E1 /* CancerCareNewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18A991DE88F84000AE6E1 /* CancerCareNewUITests.swift */; };
 		10C18AA81DE899E3000AE6E1 /* RegisterPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C18AA71DE899E3000AE6E1 /* RegisterPageViewController.swift */; };
+		10C52CD81E049F5800CC7E7B /* TreatmentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C52CD71E049F5800CC7E7B /* TreatmentPageViewController.swift */; };
+		10C52CDA1E04A18700CC7E7B /* DoctorPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C52CD91E04A18700CC7E7B /* DoctorPageViewController.swift */; };
+		10C52CDC1E04AC3200CC7E7B /* EditDoctorPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C52CDB1E04AC3200CC7E7B /* EditDoctorPageViewController.swift */; };
+		10C52CDE1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C52CDD1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift */; };
 		10CE083C1E03523E0091B020 /* ReportPopUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE083B1E03523E0091B020 /* ReportPopUPViewController.swift */; };
 		538907C2037C428455849A7B /* Pods_CancerCareNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C37ED1E47B99DB62B2E60 /* Pods_CancerCareNew.framework */; };
 		98599ED21DEA51C9003DAB0C /* EditPatientInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98599ED11DEA51C9003DAB0C /* EditPatientInfoViewController.swift */; };
@@ -84,6 +88,10 @@
 		10C18A991DE88F84000AE6E1 /* CancerCareNewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CancerCareNewUITests.swift; sourceTree = "<group>"; };
 		10C18A9B1DE88F84000AE6E1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		10C18AA71DE899E3000AE6E1 /* RegisterPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterPageViewController.swift; sourceTree = "<group>"; };
+		10C52CD71E049F5800CC7E7B /* TreatmentPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TreatmentPageViewController.swift; sourceTree = "<group>"; };
+		10C52CD91E04A18700CC7E7B /* DoctorPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoctorPageViewController.swift; sourceTree = "<group>"; };
+		10C52CDB1E04AC3200CC7E7B /* EditDoctorPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDoctorPageViewController.swift; sourceTree = "<group>"; };
+		10C52CDD1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTreatmentPageViewController.swift; sourceTree = "<group>"; };
 		10CE083B1E03523E0091B020 /* ReportPopUPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportPopUPViewController.swift; sourceTree = "<group>"; };
 		17C0A1D8691B0184FE376849 /* Pods-CancerCareNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNew/Pods-CancerCareNew.debug.xcconfig"; sourceTree = "<group>"; };
 		17FBBDDFB3E463171204566B /* Pods_CancerCareNewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CancerCareNewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,6 +197,10 @@
 				998398ED1E0214C200C8963C /* TempPopUpViewController.swift */,
 				10CE083B1E03523E0091B020 /* ReportPopUPViewController.swift */,
 				1064AE7F1E036A7E002494BA /* User.swift */,
+				10C52CD71E049F5800CC7E7B /* TreatmentPageViewController.swift */,
+				10C52CD91E04A18700CC7E7B /* DoctorPageViewController.swift */,
+				10C52CDB1E04AC3200CC7E7B /* EditDoctorPageViewController.swift */,
+				10C52CDD1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift */,
 			);
 			path = CancerCareNew;
 			sourceTree = "<group>";
@@ -527,6 +539,7 @@
 				9943A3CE1DE91DD100F95141 /* LoginViewController.swift in Sources */,
 				98599ED21DEA51C9003DAB0C /* EditPatientInfoViewController.swift in Sources */,
 				105244E61DEA11F0008B5FF0 /* PatientPageViewController.swift in Sources */,
+				10C52CDE1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift in Sources */,
 				9943A3D01DE9250A00F95141 /* HomePageViewController.swift in Sources */,
 				998398EE1E0214C200C8963C /* TempPopUpViewController.swift in Sources */,
 				1064AE801E036A7E002494BA /* User.swift in Sources */,
@@ -534,11 +547,14 @@
 				998398E81E02039C00C8963C /* BloodPopUpViewController.swift in Sources */,
 				10CE083C1E03523E0091B020 /* ReportPopUPViewController.swift in Sources */,
 				10C18AA81DE899E3000AE6E1 /* RegisterPageViewController.swift in Sources */,
+				10C52CDC1E04AC3200CC7E7B /* EditDoctorPageViewController.swift in Sources */,
 				105244E41DEA0654008B5FF0 /* MenuTableViewController.swift in Sources */,
 				9994F8AD1DFA00DB0082BD24 /* DatabaseAdapter.swift in Sources */,
 				105244F01DEA127A008B5FF0 /* AboutViewController.swift in Sources */,
+				10C52CDA1E04A18700CC7E7B /* DoctorPageViewController.swift in Sources */,
 				10C18A771DE88F84000AE6E1 /* AppDelegate.swift in Sources */,
 				105244EE1DEA125F008B5FF0 /* SecondaryAccountViewController.swift in Sources */,
+				10C52CD81E049F5800CC7E7B /* TreatmentPageViewController.swift in Sources */,
 				105244F21DEA12B9008B5FF0 /* LogoutViewController.swift in Sources */,
 				10C18A7F1DE88F84000AE6E1 /* CancerCareNew.xcdatamodeld in Sources */,
 			);

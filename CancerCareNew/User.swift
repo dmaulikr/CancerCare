@@ -56,22 +56,6 @@ struct User {
 
     }
     
-    func setCurrMood0(moodRef: FIRDatabaseReference, currUser: FIRUser){
-        let currUserID = FIRAuth.auth()?.currentUser?.uid
-        
-        moodRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            
-            if snapshot.hasChild(currUserID!) {
-                let moodRefWithID = moodRef.child(currUserID!)
-                self.networkRef.setMoodRefWithID(moodRefWithID: moodRefWithID)
-            } else {
-                self.networkRef.setMoodValue(message: "Kullanıcı kaydı yok")
-            }
-        }) { (error) in
-            print(error.localizedDescription)
-        }
-    }
-    
     func getUserDate() -> String{
         let currentDateTime = Date()
         let userCalendar = Calendar.current

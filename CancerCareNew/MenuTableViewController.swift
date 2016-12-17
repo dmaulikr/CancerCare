@@ -16,8 +16,8 @@ class MenuTableViewController: UITableViewController
     
     override func viewDidLoad()
     {
-        self.pageNames = ["Ana Sayfa", "Çocuğum", "Planlayıcı", "Sağlık Değerleri", "Hesabım", "İkincil Hesap", "Hakkımızda", "Çıkış Yap"]
-        self.identities = ["homePage", "patientPage", "organizerPage", "vitalsPage", "myAccountPage", "secondaryAccountPage", "aboutPage", "logoutPage"]
+        self.pageNames = ["Ana Sayfa", "Çocuğum", "Planlayıcı", "Tedavi Bilgileri","Sağlık Değerleri", "Doktorum", "Hesabım", "İkincil Hesap", "Hakkımızda", "Çıkış Yap"]
+        self.identities = ["homePage", "patientPage", "organizerPage", "treatmentPage","vitalsPage", "doctorPage", "myAccountPage", "secondaryAccountPage", "aboutPage", "logoutPage"]
         
         self.prefersStatusBarHidden
         //self.tableView.backgroundColor = UIColor.lightGray

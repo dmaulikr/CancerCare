@@ -84,60 +84,111 @@ class HomePageViewController: UIViewController {
         self.isAddEnabled = false
         self.saveMoodButton.setTitle("Ekle", for: .normal)
         self.moodSlider.isHidden = true
-        eventLabel.text = "16.12.2016 - 18:00 KAÇUV'la görüşme"
+        eventLabel.text = "Etkinlik bilgisi yükleniyöördü..."
         
          displayCurrentMood(){r in
             self.moodTextLabel.text = r
         }
-        // displayCurrMood()
         
-        
-        
-        /*
-        databaseRef.child("events").child(currUserID!).observeSingleEvent(of: .value, with: { (snapshot) in
-            let value = snapshot.value as? NSDictionary
-            let eventTitle = value?[self.organizer.getEventDate()] as? String?
-            
-            if (self.organizer.getEventDate() == self.user.getUserDate()){
-                
-                self.eventLabel.text = eventTitle!
-            } else{
-                self.eventLabel.text = "Bugün için etkinliğiniz yok."
-            }
-            }) { (error) in
-            print(error.localizedDescription)
+        displayCurrentEvent(){r in
+            self.eventLabel.text = r
         }
-        */
+
+    }
+
+    func getCurrentDate() -> String {
         
-        // şu anki date'in dönüştürülmüş key'ine bak
-        // eğer key'e ait bir json node'ı yoksa "bugüne dair bir girdi yok"
-        // varsa da oradan çek
-        // çekilen veri hem moodTextLabel hem de moodSlider.value = key.getValue() olarak tanımlayabiliriz
-        //
+        let currentDateTime = Date()
         
-        /*
-        let currUser = FIRAuth.auth()?.currentUser
-        let userID = currUser?.uid
-        eventLabel.text = databaseRef.child("children").child(userID!).value(forKeyPath: "/events/event") as! String?
-        //eventLabel.text =
-        */
-        // Do any additional setup after loading the view.
+        let userCalendar = Calendar.current
+        
+        let requestedComponents: Set<Calendar.Component> = [
+            
+            .year,
+            
+            .month,
+            
+            .day
+            
+        ]
+        
+        
+        
+        let dateComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
+        
+        
+        
+        let year = dateComponents.year?.description
+        
+        let month = dateComponents.month?.description
+        
+        let day = dateComponents.day?.description
+        
+        
+        
+        var dateKey = ""
+        
+        dateKey += year!
+        
+        dateKey += month!
+        
+        dateKey += day!
+        
+        return dateKey
+        
+        
+        
     }
     
+    
+    
     func displayCurrentMood(completion: @escaping (String)->Void){
-        let currDateKey = "15122016"
+        
+        let currDateKey = getCurrentDate()
+        
         let currUserID = FIRAuth.auth()?.currentUser?.uid
+        
         var result = ""
+        
+        
         
         database.fetchDict(key: "\(currUserID!)", path: "moods/"){ resultt in
             
+            
+            
+            for k in resultt {
+                
+                if (k.key == currDateKey){
+                    
+                    result = "Çocuğumun bugünkü mood'u \(k.value)"
+                    
+                }
+                
+            }
+            
+            completion(result)
+            
+        }
+        
+    }
+    
+    
+    
+    func displayCurrentEvent(completion: @escaping (String)->Void) {
+        
+        //let eventPath = "events/\(database.uid)"
+        let currDateKey = getCurrentDate()
+        let currUserID = FIRAuth.auth()?.currentUser?.uid
+        var result = ""
+        database.fetchDict(key: "\(currUserID!)", path: "events/"){ resultt in
             for k in resultt {
                 if (k.key == currDateKey){
-                    result = "Çocuğumun bugünkü mood'u \(k.value)"
+                    result = "Bugünkü etkinlik \(k.value)"
                 }
             }
             completion(result)
         }
+
     }
 
     override func didReceiveMemoryWarning() {

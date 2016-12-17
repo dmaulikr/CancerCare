@@ -23,6 +23,7 @@ class OrganizerViewController: UIViewController {
 
     let currUser = FIRAuth.auth()?.currentUser
     
+    @IBOutlet weak var eventLocationTextField: UITextField!
        
     @IBOutlet weak var eventsToShow: UITextView!
     
@@ -49,6 +50,7 @@ class OrganizerViewController: UIViewController {
     
         @IBAction func addEventButtonTapped(_ sender: Any)  {
         let title = eventTextField.text
+        let place = eventLocationTextField.text
         let formatter = DateFormatter()
         formatter.dateFormat = "dd"
         let dayString = formatter.string(from: datePicker.date)
@@ -68,10 +70,48 @@ class OrganizerViewController: UIViewController {
         savedEvent = currEvent + "\n" + savedEvent
         eventsToShow.text = savedEvent
         
-        networkingService.updateEvents(user: currUser!, event: currEvent, date: dateString, hour: finalHourString)
+            networkingService.updateEvents(user: currUser!, year: yearString, month: monthString, day: dayString, title: title!, place: place!, hour: finalHourString)
         
         currEvent = ""
     }
+    
+    func getCurrentDate() -> String{
+        let currentDateTime = Date()
+        let userCalendar = Calendar.current
+        let requestedComponents: Set<Calendar.Component> = [
+            .year,
+            .month,
+            .day
+        ]
+        
+        let dateComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
+        
+        let year = dateComponents.year?.description
+        let month = dateComponents.month?.description
+        let day = dateComponents.day?.description
+        
+        var dateKey = ""
+        dateKey += year!
+        dateKey += month!
+        dateKey += day!
+        return dateKey
+    }
+    
+    func displayAllEvents(completion: @escaping (String)-> Void) {
+        let currDateKey = getCurrentDate()
+        let currUserID = FIRAuth.auth()?.currentUser?.uid
+        var result = ""
+        
+        database.fetchDict(key: "\(currUserID!)", path: "events/"){ resultt in
+            for k in resultt {
+                if (k.key == currDateKey){
+                    result = "Bugünkü etkinik: \(k.value)"
+                }
+            }
+            completion(result)
+        }
+    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
