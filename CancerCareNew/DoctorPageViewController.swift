@@ -24,13 +24,17 @@ class DoctorPageViewController: UIViewController {
     @IBOutlet weak var editDoctorInfoButton: UIButton!
     
     @IBAction func editDoctorInfoButtonAction(_ sender: Any) {
-        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "editDoctorPage") as! EditDoctorPageViewController
-        self.navigationController!.pushViewController(nextViewController, animated: true)
+        let vcName = "editDoctorPage"
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+        
+        self.navigationController?.pushViewController(viewController!, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.navigationController?.title = "Doktorum"
+        self.navigationItem.title = self.navigationController?.title
         // Do any additional setup after loading the view.
     }
 

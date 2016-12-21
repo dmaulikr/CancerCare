@@ -12,7 +12,7 @@ import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
 
-class EditPatientInfoViewController: UIViewController {
+class EditPatientInfoViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var editNameTextField: UITextField!
     @IBOutlet weak var editSurnameTextField: UITextField!
@@ -31,36 +31,71 @@ class EditPatientInfoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+    // Do any additional setup after loading the view.
 
-        // Do any additional setup after loading the view.
+        
+    
     }
-
-    override func didReceiveMemoryWarning() {
+       override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     @IBAction func confirmPatientInfoButtonAction(_ sender: Any) {
-        // do stuff
         let currUser = FIRAuth.auth()?.currentUser
+        
         //let currUserID = currUser?.uid
+        
         //let childRef = databaseRef.child("children").child(currUserID!)
+        
         // childRef.child("childName").setValue(editNameTextfield.text)
-        networkingService.updateChildInfo(user: currUser!, name: self.editNameTextField.text!, surname: self.editSurnameTextField.text!, birthDate: self.editBirthDateTextField.text!, diagnosis: self.editDiagnosisTextField.text!, diagnosisDate: self.editDiagnosisDateTextField.text!, treatmentLocation: self.editTreatmentLocationTextField.text!, treatmentType: self.editTreatmentTypeTextField.text!)
         
-        // go patient page
-        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "patientPage") as! PatientPageViewController
-        self.dismiss(animated: false, completion: nil)
-        self.present(nextViewController, animated: true)
-
+        let alertMessage = networkingService.updateChildInfo(user: currUser!, name: self.editNameTextField.text!, surname: self.editSurnameTextField.text!, birthDate: self.editBirthDateTextField.text!, diagnosis: self.editDiagnosisTextField.text!, diagnosisDate: self.editDiagnosisDateTextField.text!, treatmentLocation: self.editTreatmentLocationTextField.text!, treatmentType: self.editTreatmentTypeTextField.text!)
         
+        
+        
+        let alertController = UIAlertController(title: "", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let defaultAction = UIAlertAction(title: "Tamam", style: UIAlertActionStyle.default)
+            
+        {
+            
+            (UIAlertAction) -> Void in
+            
+        }
+        
+        
+        
+        alertController.addAction(defaultAction)
+        
+        self.present(alertController, animated: true)
+            
+        {
+            
+            () ->  Void in
+            
+        }
     }
     
 
     @IBAction func cancelPatientInfoButtonAction(_ sender: Any) {
-        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "patientPage") as! PatientPageViewController
-        self.dismiss(animated: false, completion: nil)
-        self.present(nextViewController, animated: true)
+        /*let vcName = "patientPage"
+        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+        self.navigationController?.pushViewController(viewController!, animated: true)
+        */
+        editNameTextField.text = ""
+        
+        editSurnameTextField.text = ""
+        
+        editBirthDateTextField.text = ""
+        
+        editDiagnosisTextField.text = ""
+        
+        editDiagnosisDateTextField.text = ""
+        
+        editTreatmentLocationTextField.text = ""
+        
+        editTreatmentTypeTextField.text = "" 
     }
     /*
     // MARK: - Navigation

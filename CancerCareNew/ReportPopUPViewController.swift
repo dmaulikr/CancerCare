@@ -25,7 +25,7 @@ class ReportPopUPViewController: UIViewController, UIImagePickerControllerDelega
     }
     @IBAction func photoFromLibraryButtonAction(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
-            var imagePicker = UIImagePickerController()
+            let imagePicker = UIImagePickerController()
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary;
             imagePicker.allowsEditing = true
@@ -36,7 +36,7 @@ class ReportPopUPViewController: UIViewController, UIImagePickerControllerDelega
     @IBAction func cameraButtonAction(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera) {
             
-            var imagePicker = UIImagePickerController()
+            let imagePicker = UIImagePickerController()
             
             imagePicker.delegate = self
             

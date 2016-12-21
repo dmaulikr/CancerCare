@@ -130,7 +130,7 @@ struct NetworkingService {
                     if error != nil {
                         result = -1
                         return
-                            print(error?.localizedDescription)
+                            print(error?.localizedDescription as Any)
                     } else {
                         print("Yeni bilgiler başarıyla güncellendi")
                         result = 1
@@ -149,33 +149,83 @@ struct NetworkingService {
     
     // name, surname, birthdate, diag, diagdate, treloc, tretype
     
-    func updateChildInfo(user: FIRUser, name: String, surname: String, birthDate: String, diagnosis: String, diagnosisDate: String, treatmentLocation: String, treatmentType: String){
+    func updateChildInfo(user: FIRUser, name: String, surname: String, birthDate: String, diagnosis: String, diagnosisDate: String, treatmentLocation: String, treatmentType: String) -> String{
+        
         let userID = user.uid
+        
         let childRef = databaseRef.child("children").child(userID)
+        
+        var alertMessage = ""
+        
         if name != "" {
+            
             childRef.child("name").setValue(name)
-        }
-        if surname != "" {
-            childRef.child("surname").setValue(surname)
-        }
-        if birthDate != "" {
-            childRef.child("birthDate").setValue(birthDate)
-        }
-        if diagnosis != "" {
-            childRef.child("diagnosis").setValue(diagnosis)
-        }
-        if diagnosisDate != "" {
-            childRef.child("diagnosisDate").setValue(diagnosisDate)
-        }
-        if treatmentLocation != "" {
-            childRef.child("treatmentLocation").setValue(treatmentLocation)
-        }
-        if treatmentType != "" {
-            childRef.child("treatmentType").setValue(treatmentType)
+            
+            alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+            
         }
         
+        if surname != "" {
+            
+            childRef.child("surname").setValue(surname)
+            
+            alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+            
+        }
+        
+        if birthDate != "" {
+            
+            childRef.child("birthDate").setValue(birthDate)
+            
+            alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+            
+        }
+        
+        if diagnosis != "" {
+            
+            childRef.child("diagnosis").setValue(diagnosis)
+            
+            alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+            
+        }
+        
+        if diagnosisDate != "" {
+            
+            childRef.child("diagnosisDate").setValue(diagnosisDate)
+            
+            alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+            
+        }
+        
+        if treatmentLocation != "" {
+            
+            childRef.child("treatmentLocation").setValue(treatmentLocation)
+            
+            alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+            
+        }
+        
+        if treatmentType != "" {
+            
+            childRef.child("treatmentType").setValue(treatmentType)
+            
+            alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+            
+        }
+        
+        
+        
+        if name == "" && surname == "" && birthDate == "" && diagnosis == "" && diagnosisDate == "" && treatmentLocation == "" && treatmentType == ""{
+            
+            alertMessage = "Lütfen en az bir alanı doldurunuz."
+            
+        }
+        
+        return alertMessage
+        
+        
+        
     }
-    
     
     func updateDoctorInfo(user: FIRUser, name: String, email: String, phone: String, address: String){
         let userID = user.uid

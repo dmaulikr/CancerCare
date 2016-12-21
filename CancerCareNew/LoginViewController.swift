@@ -16,11 +16,13 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var registerButton: UIButton!
     var storyboardRefForLogin = UIStoryboard(name: "Main", bundle: nil)
-
+    
+   
     override func viewDidLoad() {
         super.viewDidLoad()
         self.emailTextField.text = "kk@gmail.com"
         self.passwordTextField.text = "cehape"
+        
         
 
         // Do any additional setup after loading the view.

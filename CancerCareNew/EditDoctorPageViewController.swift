@@ -32,13 +32,6 @@ class EditDoctorPageViewController: UIViewController {
     @IBAction func saveDoctorInfoButtonAction(_ sender: Any) {
         let currUser = FIRAuth.auth()?.currentUser
         networkingService.updateDoctorInfo(user: currUser!, name: doctorNameTextField.text!, email: doctorMailTextField.text!, phone: doctorPhoneTextField.text!, address: doctorAddressTextField.text!)
-        
-        // go to doctor page
-        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "doctorPage") as! DoctorPageViewController
-        self.dismiss(animated: false, completion: nil)
-        self.present(nextViewController, animated: true)
-        
-
     }
     
     @IBAction func cancelDoctorInfoButtonAction(_ sender: Any) {

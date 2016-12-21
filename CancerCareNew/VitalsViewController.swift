@@ -38,7 +38,7 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
         popController.modalPresentationStyle = UIModalPresentationStyle.popover
         popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
         popController.popoverPresentationController?.delegate = self
-        popController.popoverPresentationController?.sourceView = sender as! UIView
+        popController.popoverPresentationController?.sourceView = (sender as! UIView)
         popController.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
         self.present(popController, animated: true, completion: nil)
     }
@@ -48,7 +48,7 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
         popController.modalPresentationStyle = UIModalPresentationStyle.popover
         popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
         popController.popoverPresentationController?.delegate = self
-        popController.popoverPresentationController?.sourceView = sender as! UIView
+        popController.popoverPresentationController?.sourceView = (sender as! UIView)
         popController.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
         self.present(popController, animated: true, completion: nil)
     }
@@ -58,7 +58,7 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
         popController.modalPresentationStyle = UIModalPresentationStyle.popover
         popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
         popController.popoverPresentationController?.delegate = self
-        popController.popoverPresentationController?.sourceView = sender as! UIView
+        popController.popoverPresentationController?.sourceView = (sender as! UIView)
         popController.popoverPresentationController?.sourceRect = (sender as AnyObject).bounds
         self.present(popController, animated: true, completion: nil)
       

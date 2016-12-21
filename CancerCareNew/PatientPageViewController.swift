@@ -64,9 +64,11 @@ class PatientPageViewController: UIViewController {
     }
     
     @IBAction func editPatientInfoButtonAction(_ sender: Any) {
-        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "editPatientInfoPage") as! EditPatientInfoViewController
-    self.navigationController!.pushViewController(nextViewController, animated: true)
-    }
+        let vcName = "editPatientInfoPage"
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+        
+        self.navigationController?.pushViewController(viewController!, animated: true)    }
     
     @IBAction func doctorInfoButtonAction(_ sender: Any) {
         // create doctor page and do stuff

@@ -10,8 +10,9 @@ import EventKit
 import Firebase
 import FirebaseAuth
 
-class OrganizerViewController: UIViewController {
+class OrganizerViewController: UIViewController, UITextFieldDelegate {
 
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     
     var savedEvent : String = ""
     
@@ -73,6 +74,69 @@ class OrganizerViewController: UIViewController {
             networkingService.updateEvents(user: currUser!, year: yearString, month: monthString, day: dayString, title: title!, place: place!, hour: finalHourString)
         
         currEvent = ""
+            
+            if appDelegate.eventStore == nil {
+                
+                appDelegate.eventStore = EKEventStore()
+                
+                appDelegate.eventStore?.requestAccess(
+                    
+                    to: EKEntityType.reminder, completion: {(granted, error) in
+                        
+                        if !granted {
+                            
+                            print("Access to store not granted")
+                            
+                            print(error?.localizedDescription)
+                            
+                        } else {
+                            
+                            print("Access granted")
+                            
+                        }
+                        
+                })
+                
+            }
+            
+            if (appDelegate.eventStore != nil) {
+                
+                self.createReminder()
+                
+            }
+            
+
+    }
+    
+    func createReminder() {
+        
+        let reminder = EKReminder(eventStore: appDelegate.eventStore!)
+        
+        reminder.title = eventTextField.text!
+        
+        reminder.calendar =
+            
+            appDelegate.eventStore!.defaultCalendarForNewReminders()
+        
+        let date = datePicker.date
+        
+        let alarm = EKAlarm(absoluteDate: date)
+        
+        reminder.addAlarm(alarm)
+        
+        do {
+            
+            try appDelegate.eventStore?.save(reminder,
+                                             
+                                             commit: true)
+            
+        } catch let error {
+            
+            print("Reminder failed with error \(error.localizedDescription)")
+            
+        }
+        
+        
     }
     
     func getCurrentDate() -> String{
@@ -129,4 +193,34 @@ class OrganizerViewController: UIViewController {
          */
         // Do any additional setup after loading the view.
     }
+    
+    /*
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        moveTextField(textField: textField, moveDist: -150, up:true)
+    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        moveTextField(textField: textField, moveDist: -150, up:false)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func moveTextField(textField: UITextField, moveDist: Int, up:Bool){
+        let moveDuration = 0.3
+        let movement : CGFloat = CGFloat (up ? moveDist: -moveDist)
+        
+        UIView.beginAnimations("animateTextField", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(moveDuration)
+        self.view.frame = self.view.frame.offsetBy(dx: 0, dy: movement)
+       
+        
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        eventTextField.endEditing(true)
+        eventLocationTextField.endEditing(true)
+    }*/
 }
