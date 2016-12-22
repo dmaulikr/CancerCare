@@ -73,7 +73,7 @@ class OrganizerViewController: UIViewController, UITextFieldDelegate {
             networkingService.updateEvents(user: currUser!, year: yearString, month: monthString, day: dayString, title: title!, place: place!, hour: finalHourString)
         
         currEvent = ""
-            
+        var alertMessage = ""
             if appDelegate.eventStore == nil {
                 
                 appDelegate.eventStore = EKEventStore()
@@ -100,22 +100,22 @@ class OrganizerViewController: UIViewController, UITextFieldDelegate {
             
             if (appDelegate.eventStore != nil) {
                 
-                self.createReminder()
+                alertMessage = self.createReminder()
                 
             }
+            displayMessage(alertMessage: alertMessage)
             
-
     }
     
-    func createReminder() {
+    func createReminder() -> String{
+        
+        var result = ""
         
         let reminder = EKReminder(eventStore: appDelegate.eventStore!)
         
         reminder.title = eventTextField.text!
         
-        reminder.calendar =
-            
-            appDelegate.eventStore!.defaultCalendarForNewReminders()
+        reminder.calendar = appDelegate.eventStore!.defaultCalendarForNewReminders()
         
         let date = datePicker.date
         
@@ -125,18 +125,46 @@ class OrganizerViewController: UIViewController, UITextFieldDelegate {
         
         do {
             
-            try appDelegate.eventStore?.save(reminder,
-                                             
-                                             commit: true)
+            try appDelegate.eventStore?.save(reminder, commit: true)
+            
+            result = "Hatırlatıcı oluşturuldu"
             
         } catch let error {
             
-            print("Reminder failed with error \(error.localizedDescription)")
+            result = "Hata! Tekrar deneyiniz"//print("Reminder failed with error \(error.localizedDescription)")
             
         }
         
+        return result
         
     }
+    
+    
+    
+    func displayMessage(alertMessage: String) {
+        
+        let alertController = UIAlertController(title: "", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let defaultAction = UIAlertAction(title: "Tamam", style: UIAlertActionStyle.default)
+            
+        {
+            
+            (UIAlertAction) -> Void in
+            
+        }
+        
+        alertController.addAction(defaultAction)
+        
+        self.present(alertController, animated: true)
+            
+        {
+            
+            () ->  Void in
+            
+        }
+        
+    }
+    
     
     func getCurrentDate() -> String{
         let currentDateTime = Date()

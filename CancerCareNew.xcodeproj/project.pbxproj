@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		102280B21DE8A74500D9F21A /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102280B11DE8A74500D9F21A /* NetworkingService.swift */; };
+		1028C2CA1E0C7005001EA5FC /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028C2C91E0C7005001EA5FC /* BarChartViewController.swift */; };
 		105244E41DEA0654008B5FF0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244E31DEA0654008B5FF0 /* MenuTableViewController.swift */; };
 		105244E61DEA11F0008B5FF0 /* PatientPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244E51DEA11F0008B5FF0 /* PatientPageViewController.swift */; };
 		105244E81DEA1211008B5FF0 /* OrganizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244E71DEA1211008B5FF0 /* OrganizerViewController.swift */; };
@@ -47,6 +48,27 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		1028C2C21E0C6BAA001EA5FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1028C2BC1E0C6BA9001EA5FC /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		1028C2C41E0C6BAA001EA5FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1028C2BC1E0C6BA9001EA5FC /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		1028C2C61E0C6BAA001EA5FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1028C2BC1E0C6BA9001EA5FC /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
 		10C18A8B1DE88F84000AE6E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 10C18A6B1DE88F84000AE6E1 /* Project object */;
@@ -63,8 +85,23 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		1028C2B91E0C4C61001EA5FC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		102280B11DE8A74500D9F21A /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		1028C2BC1E0C6BA9001EA5FC /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Charts-3.0.0/Charts.xcodeproj"; sourceTree = "<group>"; };
+		1028C2C91E0C7005001EA5FC /* BarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
 		105244E31DEA0654008B5FF0 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		105244E51DEA11F0008B5FF0 /* PatientPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientPageViewController.swift; sourceTree = "<group>"; };
 		105244E71DEA1211008B5FF0 /* OrganizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +180,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1028C2BD1E0C6BA9001EA5FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1028C2C31E0C6BAA001EA5FC /* Charts.framework */,
+				1028C2C51E0C6BAA001EA5FC /* ChartsRealm.framework */,
+				1028C2C71E0C6BAA001EA5FC /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		10C18A6A1DE88F84000AE6E1 = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +215,7 @@
 		10C18A751DE88F84000AE6E1 /* CancerCareNew */ = {
 			isa = PBXGroup;
 			children = (
+				1028C2BC1E0C6BA9001EA5FC /* Charts.xcodeproj */,
 				9943A3CB1DE91D1400F95141 /* GoogleService-Info.plist */,
 				10C18A761DE88F84000AE6E1 /* AppDelegate.swift */,
 				10C18A7A1DE88F84000AE6E1 /* Main.storyboard */,
@@ -201,6 +249,7 @@
 				10C52CD91E04A18700CC7E7B /* DoctorPageViewController.swift */,
 				10C52CDB1E04AC3200CC7E7B /* EditDoctorPageViewController.swift */,
 				10C52CDD1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift */,
+				1028C2C91E0C7005001EA5FC /* BarChartViewController.swift */,
 			);
 			path = CancerCareNew;
 			sourceTree = "<group>";
@@ -259,6 +308,7 @@
 				10C18A711DE88F84000AE6E1 /* Resources */,
 				96800C0EE0E258768795D914 /* [CP] Embed Pods Frameworks */,
 				9D18C42113081C564A1441CF /* [CP] Copy Pods Resources */,
+				1028C2B91E0C4C61001EA5FC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -349,6 +399,12 @@
 			mainGroup = 10C18A6A1DE88F84000AE6E1;
 			productRefGroup = 10C18A741DE88F84000AE6E1 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 1028C2BD1E0C6BA9001EA5FC /* Products */;
+					ProjectRef = 1028C2BC1E0C6BA9001EA5FC /* Charts.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				10C18A721DE88F84000AE6E1 /* CancerCareNew */,
@@ -357,6 +413,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		1028C2C31E0C6BAA001EA5FC /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 1028C2C21E0C6BAA001EA5FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1028C2C51E0C6BAA001EA5FC /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = 1028C2C41E0C6BAA001EA5FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		1028C2C71E0C6BAA001EA5FC /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 1028C2C61E0C6BAA001EA5FC /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		10C18A711DE88F84000AE6E1 /* Resources */ = {
@@ -547,6 +627,7 @@
 				998398E81E02039C00C8963C /* BloodPopUpViewController.swift in Sources */,
 				10CE083C1E03523E0091B020 /* ReportPopUPViewController.swift in Sources */,
 				10C18AA81DE899E3000AE6E1 /* RegisterPageViewController.swift in Sources */,
+				1028C2CA1E0C7005001EA5FC /* BarChartViewController.swift in Sources */,
 				10C52CDC1E04AC3200CC7E7B /* EditDoctorPageViewController.swift in Sources */,
 				105244E41DEA0654008B5FF0 /* MenuTableViewController.swift in Sources */,
 				9994F8AD1DFA00DB0082BD24 /* DatabaseAdapter.swift in Sources */,
@@ -708,6 +789,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 17C0A1D8691B0184FE376849 /* Pods-CancerCareNew.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5CMH2C8TGF;
@@ -723,6 +805,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 48FD740DEC9EDB46CDABC5B4 /* Pods-CancerCareNew.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = 5CMH2C8TGF;

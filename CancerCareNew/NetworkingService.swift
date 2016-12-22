@@ -227,22 +227,7 @@ struct NetworkingService {
         
     }
     
-    func updateDoctorInfo(user: FIRUser, name: String, email: String, phone: String, address: String){
-        let userID = user.uid
-        let doctorRef = databaseRef.child("doctors").child(userID)
-        if name != "" {
-            doctorRef.child("name").setValue(name)
-        }
-        if email != "" {
-            doctorRef.child("email").setValue(email)
-        }
-        if phone != "" {
-            doctorRef.child("phone").setValue(phone)
-        }
-        if address != "" {
-            doctorRef.child("address").setValue(address)
-        }
-    }
+    
     
     func updateMedicineInfo(user: FIRUser, name: String, dosage: String, frequency: String){
         let userID = user.uid
@@ -370,6 +355,7 @@ struct NetworkingService {
         
         let eventRef = databaseRef.child("events/\(userID)/\(dateKey)")
         
+        
         let eventToBeSaved = "\(title): ,Yer: \(place), Tarih: \(day).\(month).\(year), Saat: \(hour)"
         
         eventRef.setValue(eventToBeSaved)
@@ -389,8 +375,83 @@ struct NetworkingService {
          hourRef.setValue(hour)
          
          */
+     
+        
+    }
+    
+    func updateDoctorInfo(user: FIRUser, name: String, email: String, phone: String, address: String) -> String{
+        
+        let userID = user.uid
+        
+        let doctorRef = databaseRef.child("doctors").child(userID)
+        
+        var alertMessage = ""
+        
+        let isPhoneCorrect = phone.characters.count==10 || phone == "";
+        
+        var isPhoneNumeric = false
+        
+        let nonNumericCharacters = CharacterSet.decimalDigits.inverted
+        
+        if phone.rangeOfCharacter(from: nonNumericCharacters) == nil {
+            
+            isPhoneNumeric = true // print("Test string was a number")
+            
+        }
         
         
+        
+        if isPhoneCorrect && isPhoneNumeric {
+            
+            if name != "" {
+                
+                doctorRef.child("name").setValue(name)
+                
+                alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+                
+            }
+            
+            if email != "" {
+                
+                doctorRef.child("email").setValue(email)
+                
+                alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+                
+            }
+            
+            if phone != "" {
+                
+                doctorRef.child("phone").setValue(phone)
+                
+                alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+                
+            }
+            
+            if address != "" {
+                
+                doctorRef.child("address").setValue(address)
+                
+                alertMessage = "Bilgileriniz Başarıyla Güncellendi"
+                
+            }
+            
+        } else {
+            
+            alertMessage = "Telefon numarası hatalı"
+            
+        }
+        
+        
+        
+        if name=="" && email=="" && phone=="" && address=="" {
+            
+            alertMessage = "Lütfen en az bir alanı doldurunuz"
+            
+        }
+        
+        
+        
+        return alertMessage
         
     }
     

@@ -11,6 +11,7 @@ import Firebase
 import FirebaseAuth
 import FirebaseStorage
 import FirebaseDatabase
+import Charts
 
 class VitalsViewController: UIViewController, UIPopoverPresentationControllerDelegate {
     
@@ -20,13 +21,47 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
     @IBOutlet weak var addTempCountButton: UIButton!
     @IBOutlet weak var addReportButton: UIButton!
   
+    @IBOutlet weak var showBloodGraphButton: UIButton!
     
+    
+    @IBAction func showBloodGraphButtonAction(_ sender: Any) {
+        
+        let vcName = "barChartViewPage"
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+        
+        self.navigationController?.pushViewController(viewController!, animated: true)
+        
+    }
+    
+       
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.title = "Sağlık Değerleri"
         self.navigationItem.title = self.navigationController?.title
-        // Do any additional setup after loading the view.
+                
     }
+    
+    /*func viewWillAppear() {
+        let chart = BarChartView(frame: self.view.frame)
+        let yVals: [Double] = [ 873, 568, 937, 726, 696, 687, 180, 389, 90, 928, 890, 437]
+        var entries = [ BarChartDataEntry]()
+        for (i, v) in yVals.enumerated() {
+            let entry = BarChartDataEntry()
+            entry.x = Double( i)
+            entry.y = v
+            
+            entries.append( entry)
+        }
+        let set = BarChartDataSet( values: entries, label: "Bar Chart")
+        let data = BarChartData( dataSet: set)
+        chart.data = data
+        // no data text
+        chart.noDataText = "No data available"
+        // user interaction
+        chart.isUserInteractionEnabled = false
+        self.view.addSubview( chart)
+    }*/
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -68,16 +103,5 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
         return UIModalPresentationStyle.none
     }
     
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+        
 }

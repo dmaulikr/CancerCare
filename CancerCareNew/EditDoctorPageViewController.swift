@@ -31,7 +31,9 @@ class EditDoctorPageViewController: UIViewController {
     
     @IBAction func saveDoctorInfoButtonAction(_ sender: Any) {
         let currUser = FIRAuth.auth()?.currentUser
-        networkingService.updateDoctorInfo(user: currUser!, name: doctorNameTextField.text!, email: doctorMailTextField.text!, phone: doctorPhoneTextField.text!, address: doctorAddressTextField.text!)
+        let alertMessage = networkingService.updateDoctorInfo(user: currUser!, name: doctorNameTextField.text!, email: doctorMailTextField.text!, phone: doctorPhoneTextField.text!, address: doctorAddressTextField.text!)
+        
+        displayMessage(alertMessage: alertMessage)
     }
     
     @IBAction func cancelDoctorInfoButtonAction(_ sender: Any) {
@@ -42,6 +44,29 @@ class EditDoctorPageViewController: UIViewController {
 
     }
     
+    func displayMessage(alertMessage: String) {
+        
+        let alertController = UIAlertController(title: "", message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+        
+        let defaultAction = UIAlertAction(title: "Tamam", style: UIAlertActionStyle.default)
+            
+        {
+            
+            (UIAlertAction) -> Void in
+            
+        }
+        
+        alertController.addAction(defaultAction)
+        
+        self.present(alertController, animated: true)
+            
+        {
+            
+            () ->  Void in
+            
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 

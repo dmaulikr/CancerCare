@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import Firebase
+
 
 
 class DoctorPageViewController: UIViewController {
     
     var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
+    let currUserID = FIRAuth.auth()?.currentUser?.uid
+    let database = DatabaseAdapter()
     
     @IBOutlet weak var doctorNameLabel: UILabel!
     
@@ -31,13 +35,155 @@ class DoctorPageViewController: UIViewController {
         self.navigationController?.pushViewController(viewController!, animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.navigationController?.title = "Doktorum"
-        self.navigationItem.title = self.navigationController?.title
-        // Do any additional setup after loading the view.
+    func displayDoctorName(completion: @escaping (String)->Void){
+        
+        var result = ""
+        
+        database.fetchDict(key: "\(currUserID!)", path: "doctors/"){ resultt in
+            
+            let nameKey = "name"
+            
+            for k in resultt {
+                
+                if (k.key == nameKey){
+                    
+                    result = "\(k.value)"
+                    
+                }
+                
+            }
+            
+            completion(result)
+            
+        }
+        
     }
+    
+    
+    
+    func displayDoctorEmail(completion: @escaping (String)->Void){
+        
+        var result = ""
+        
+        database.fetchDict(key: "\(currUserID!)", path: "doctors/"){ resultt in
+            
+            let nameKey = "email"
+            
+            for k in resultt {
+                
+                if (k.key == nameKey){
+                    
+                    result = "\(k.value)"
+                    
+                }
+                
+            }
+            
+            completion(result)
+            
+        }
+        
+    }
+    
+    
+    
+    func displayDoctorAddress(completion: @escaping (String)->Void){
+        
+        var result = ""
+        
+        database.fetchDict(key: "\(currUserID!)", path: "doctors/"){ resultt in
+            
+            let nameKey = "address"
+            
+            for k in resultt {
+                
+                if (k.key == nameKey){
+                    
+                    result = "\(k.value)"
+                    
+                }
+                
+            }
+            
+            completion(result)
+            
+        }
+        
+    }
+    
+    
+    
+    func displayDoctorPhone(completion: @escaping (String)->Void){
+        
+        var result = ""
+        
+        database.fetchDict(key: "\(currUserID!)", path: "doctors/"){ resultt in
+            
+            let nameKey = "phone"
+            
+            for k in resultt {
+                
+                if (k.key == nameKey){
+                    
+                    result = "\(k.value)"
+                    
+                }
+                
+            }
+            
+            completion(result)
+            
+        }
+        
+    }
+    
 
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        
+        self.navigationController?.title = "Doktorum"
+        
+        self.navigationItem.title = self.navigationController?.title
+        
+        self.doctorNameLabel.text = "⌛️"
+        
+        self.doctorMailLabel.text = "⌛️"
+        
+        self.doctorPhoneLabel.text = "⌛️"
+        
+        self.doctorAddressLabel.text = "⌛️"
+        
+        // Do any additional setup after loading the view.
+        
+        displayDoctorName(){r in
+            
+            self.doctorNameLabel.text = r
+            
+        }
+        
+        displayDoctorEmail(){r in
+            
+            self.doctorMailLabel.text = r
+            
+        }
+        
+        displayDoctorAddress(){r in
+            
+            self.doctorAddressLabel.text = r
+            
+        }
+        
+        displayDoctorPhone(){r in
+            
+            self.doctorPhoneLabel.text = r
+            
+        }
+        
+        
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

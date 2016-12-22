@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Im-0d-lJZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="4Im-0d-lJZ">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -713,7 +713,7 @@
                                 </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tarihi ve saati seçin:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfb-OR-az2">
-                                <rect key="frame" x="16" y="181" width="343" height="29"/>
+                                <rect key="frame" x="15.5" y="181" width="343" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="343" id="sJb-C6-g7h"/>
                                     <constraint firstAttribute="height" constant="29" id="zDe-X0-QWE"/>
@@ -723,7 +723,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="H2T-8d-xYQ">
-                                <rect key="frame" x="28" y="218" width="320" height="216"/>
+                                <rect key="frame" x="27.5" y="218" width="320" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="501887040.30809498">
                                     <!--2016-11-26 21:04:00 +0000-->
                                 </date>
@@ -792,6 +792,44 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9W-fy-hIH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="938.39999999999998" y="2040.6296851574214"/>
+        </scene>
+        <!--Bar Chart View Controller-->
+        <scene sceneID="zrl-dK-ovE">
+            <objects>
+                <viewController storyboardIdentifier="barChartViewPage" id="G89-ly-sKb" customClass="BarChartViewController" customModule="CancerCareNew" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bUt-Ya-Pp5"/>
+                        <viewControllerLayoutGuide type="bottom" id="9S9-19-SAU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xiQ-W6-gi7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-90-AkB" customClass="BarChartView" customModule="Charts">
+                                <rect key="frame" x="16" y="28" width="343" height="619"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="a2x-gy-bZN"/>
+                                    <constraint firstAttribute="height" constant="619" id="suu-vf-3fu"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9S9-19-SAU" firstAttribute="top" secondItem="dhF-90-AkB" secondAttribute="bottom" constant="20" id="7uq-UE-6Zd"/>
+                            <constraint firstItem="dhF-90-AkB" firstAttribute="leading" secondItem="xiQ-W6-gi7" secondAttribute="leadingMargin" id="8zE-BB-e2J"/>
+                            <constraint firstItem="dhF-90-AkB" firstAttribute="top" secondItem="bUt-Ya-Pp5" secondAttribute="bottom" constant="8" id="Vim-Gw-3cc"/>
+                            <constraint firstItem="dhF-90-AkB" firstAttribute="trailing" secondItem="xiQ-W6-gi7" secondAttribute="trailingMargin" id="oqh-CC-KaE"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <connections>
+                        <outlet property="barChartView" destination="dhF-90-AkB" id="zm2-HE-Mkh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T0M-VQ-uhc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="149.59999999999999" y="2712.5937031484259"/>
         </scene>
         <!--Vitals View Controller-->
         <scene sceneID="u1C-pN-aG1">
@@ -868,11 +906,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5L-Nu-8X6">
+                                <rect key="frame" x="16" y="247" width="343" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="343" id="Ln5-eh-Wt3"/>
+                                    <constraint firstAttribute="height" constant="30" id="l3e-AT-0B3"/>
+                                </constraints>
+                                <state key="normal" title="Kan grafiğini göster"/>
+                                <connections>
+                                    <action selector="showBloodGraphButtonAction:" destination="0BO-fG-E1b" eventType="touchUpInside" id="LTk-xh-veM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="Na4-Bw-wxq" firstAttribute="leading" secondItem="KOZ-cj-rAS" secondAttribute="leadingMargin" id="4gk-EP-RJK"/>
                             <constraint firstItem="Psw-YL-QWX" firstAttribute="trailing" secondItem="mJq-TS-qTV" secondAttribute="trailing" id="5bN-LY-f6s"/>
+                            <constraint firstItem="d5L-Nu-8X6" firstAttribute="centerX" secondItem="KOZ-cj-rAS" secondAttribute="centerX" id="9Ea-qP-bHH"/>
                             <constraint firstItem="Na4-Bw-wxq" firstAttribute="top" secondItem="4VZ-DB-r48" secondAttribute="bottom" constant="37" id="CLD-mP-dvQ"/>
                             <constraint firstItem="4al-5j-lkR" firstAttribute="leading" secondItem="8dx-JY-fkQ" secondAttribute="leading" id="Dik-ms-pgT"/>
                             <constraint firstItem="4al-5j-lkR" firstAttribute="centerY" secondItem="mJq-TS-qTV" secondAttribute="centerY" id="E7h-HH-KUf"/>
@@ -880,6 +930,7 @@
                             <constraint firstItem="71g-CW-KKk" firstAttribute="trailing" secondItem="4al-5j-lkR" secondAttribute="trailing" id="SVK-yH-A9I"/>
                             <constraint firstItem="Na4-Bw-wxq" firstAttribute="centerY" secondItem="Psw-YL-QWX" secondAttribute="centerY" id="UT2-ao-2u1"/>
                             <constraint firstItem="Psw-YL-QWX" firstAttribute="top" secondItem="4VZ-DB-r48" secondAttribute="bottom" constant="46" id="Woe-If-KIE"/>
+                            <constraint firstItem="d5L-Nu-8X6" firstAttribute="top" secondItem="8dx-JY-fkQ" secondAttribute="bottom" constant="42" id="XUe-zx-yU6"/>
                             <constraint firstItem="Na4-Bw-wxq" firstAttribute="trailing" secondItem="71g-CW-KKk" secondAttribute="trailing" id="Xpr-Bx-5U1"/>
                             <constraint firstItem="Na4-Bw-wxq" firstAttribute="leading" secondItem="71g-CW-KKk" secondAttribute="leading" id="aVL-Pk-CgD"/>
                             <constraint firstItem="jCm-8j-hL6" firstAttribute="top" secondItem="mJq-TS-qTV" secondAttribute="bottom" constant="16" id="bQs-jh-M5X"/>
@@ -893,10 +944,12 @@
                             <constraint firstItem="Na4-Bw-wxq" firstAttribute="leading" secondItem="4al-5j-lkR" secondAttribute="leading" id="zav-nV-CaN"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <connections>
                         <outlet property="addBloodCountButton" destination="mJq-TS-qTV" id="Git-3U-YqO"/>
                         <outlet property="addReportButton" destination="jCm-8j-hL6" id="8j9-Ex-N9N"/>
                         <outlet property="addTempCountButton" destination="Psw-YL-QWX" id="Mbx-bA-SX0"/>
+                        <outlet property="showBloodGraphButton" destination="d5L-Nu-8X6" id="T91-6O-zVM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Ai-pz-7ui" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2075,7 +2128,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lkF-Ow-5df" id="6r3-yc-nri">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
