@@ -92,7 +92,9 @@ class HomePageViewController: UIViewController {
         
         displayCurrentEvent(){r in
             self.eventLabel.text = r
+            //self.eventLabel.sizeToFit()
         }
+        
 
     }
 

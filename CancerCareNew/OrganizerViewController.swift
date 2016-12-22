@@ -26,7 +26,6 @@ class OrganizerViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var eventLocationTextField: UITextField!
        
-    @IBOutlet weak var eventsToShow: UITextView!
     
     @IBOutlet weak var eventTextField: UITextField!
     
@@ -69,7 +68,7 @@ class OrganizerViewController: UIViewController, UITextFieldDelegate {
         
         currEvent += title!// + ": " + dateString + finalHourString
         savedEvent = currEvent + "\n" + savedEvent
-        eventsToShow.text = savedEvent
+        //eventsToShow.text = savedEvent
         
             networkingService.updateEvents(user: currUser!, year: yearString, month: monthString, day: dayString, title: title!, place: place!, hour: finalHourString)
         
@@ -159,6 +158,7 @@ class OrganizerViewController: UIViewController, UITextFieldDelegate {
         dateKey += month!
         dateKey += day!
         return dateKey
+        
     }
     
     func displayAllEvents(completion: @escaping (String)-> Void) {
