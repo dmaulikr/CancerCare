@@ -16,6 +16,10 @@ class MenuTableViewController: UITableViewController
     
     override func viewDidLoad()
     {
+        self.navigationController?.navigationBar.barTintColor = mainColor
+        self.navigationController?.navigationBar.tintColor = secondaryColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+
         self.pageNames = ["Ana Sayfa", "Çocuğum", "Planlayıcı", "Tedavi Bilgileri","Sağlık Değerleri", "Doktorum", "Hesabım", "İkincil Hesap", "Hakkımızda", "Çıkış Yap"]
         self.identities = ["homePage", "patientPage", "organizerPage", "treatmentPage","vitalsPage", "doctorPage", "myAccountPage", "secondaryAccountPage", "aboutPage", "logoutPage"]
         
@@ -38,7 +42,8 @@ class MenuTableViewController: UITableViewController
         
         cell?.textLabel?.text = self.pageNames[indexPath.row]
         cell?.backgroundColor = UIColor.clear
-        
+        let imageName = UIImage(named: self.pageNames[indexPath.row])
+        cell?.imageView?.image = imageName
         return cell!
     }
     

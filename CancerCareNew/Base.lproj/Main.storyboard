@@ -806,20 +806,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dhF-90-AkB" customClass="BarChartView" customModule="Charts">
-                                <rect key="frame" x="16" y="28" width="343" height="619"/>
+                                <rect key="frame" x="16" y="20" width="343" height="627"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="a2x-gy-bZN"/>
-                                    <constraint firstAttribute="height" constant="619" id="suu-vf-3fu"/>
+                                    <constraint firstAttribute="height" constant="627" id="N2c-ZG-DpM"/>
+                                    <constraint firstAttribute="width" constant="343" id="Q3k-t5-w83"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="9S9-19-SAU" firstAttribute="top" secondItem="dhF-90-AkB" secondAttribute="bottom" constant="20" id="7uq-UE-6Zd"/>
-                            <constraint firstItem="dhF-90-AkB" firstAttribute="leading" secondItem="xiQ-W6-gi7" secondAttribute="leadingMargin" id="8zE-BB-e2J"/>
-                            <constraint firstItem="dhF-90-AkB" firstAttribute="top" secondItem="bUt-Ya-Pp5" secondAttribute="bottom" constant="8" id="Vim-Gw-3cc"/>
-                            <constraint firstItem="dhF-90-AkB" firstAttribute="trailing" secondItem="xiQ-W6-gi7" secondAttribute="trailingMargin" id="oqh-CC-KaE"/>
+                            <constraint firstItem="dhF-90-AkB" firstAttribute="centerX" secondItem="xiQ-W6-gi7" secondAttribute="centerX" id="0d4-51-NTn"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="dhF-90-AkB" secondAttribute="leading" id="XDi-Hh-NNd"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dhF-90-AkB" secondAttribute="trailing" id="fEe-C5-bHY"/>
+                            <constraint firstItem="dhF-90-AkB" firstAttribute="top" secondItem="bUt-Ya-Pp5" secondAttribute="bottom" id="zdg-sG-5hL"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
@@ -2128,7 +2128,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lkF-Ow-5df" id="6r3-yc-nri">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>

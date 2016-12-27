@@ -209,6 +209,9 @@ class OrganizerViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.navigationController?.title = "Planlayıcı"
         self.navigationItem.title = "Planlayıcı"
+        self.navigationController?.navigationBar.barTintColor = mainColor
+        self.navigationController?.navigationBar.tintColor = secondaryColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         
         /*database.fetchDict(key: database.uid!, path: "events/"){
          result in

@@ -249,9 +249,9 @@ struct NetworkingService {
         if frequency != "" {
             medInfoRef.child("frequency").setValue(frequency)
         }
-        
-
     }
+    
+    
     
     func updateChildBlood(user: FIRUser, rbc: String, wbc: String, anc: String){
         

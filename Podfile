@@ -23,4 +23,5 @@ pod 'Firebase/Storage'
     # Pods for testing
   end
 
+#pod 'Charts'
 end

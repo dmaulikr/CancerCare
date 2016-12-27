@@ -36,7 +36,11 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
     
        
     override func viewDidLoad() {
+        
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = mainColor
+        self.navigationController?.navigationBar.tintColor = secondaryColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
         self.navigationController?.title = "Sağlık Değerleri"
         self.navigationItem.title = self.navigationController?.title
                 
@@ -69,7 +73,7 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
     }
     
     @IBAction func addBloodButtonAction(_ sender: Any) {
-        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "bloodPopUp")
+        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tempPopUp")
         popController.modalPresentationStyle = UIModalPresentationStyle.popover
         popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
         popController.popoverPresentationController?.delegate = self
@@ -79,7 +83,7 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
     }
 
     @IBAction func addTempButtonAction(_ sender: Any) {
-        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "tempPopUp")
+        let popController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "bloodPopUp")
         popController.modalPresentationStyle = UIModalPresentationStyle.popover
         popController.popoverPresentationController?.permittedArrowDirections = UIPopoverArrowDirection.up
         popController.popoverPresentationController?.delegate = self

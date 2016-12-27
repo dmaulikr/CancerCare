@@ -36,18 +36,17 @@ class EditTreatmentPageViewController: UIViewController, UIPickerViewDataSource,
     
     @IBAction func saveMedicineInfoButtonAction(_ sender: Any) {
         let currUser = FIRAuth.auth()?.currentUser
+        let row = medicineNamePicker.selectedRow(inComponent: 0)
+        let name = pickerView(medicineNamePicker, titleForRow: row, forComponent: 0)
+        let freq = pickerView(medicineFrequencyPicker, titleForRow: row, forComponent: 0)
         
-        networkingService.updateMedicineInfo(user: currUser!, name: medicineNamePicker.description, dosage: medicineDosageTextField.text!, frequency: medicineFrequencyPicker.description)
+        networkingService.updateMedicineInfo(user: currUser!, name: name!, dosage: medicineDosageTextField.text!, frequency: freq!)
         
         
         
         // go to treatment page
         
-        let nextViewController = storyboardRef.instantiateViewController(withIdentifier: "treatmentPage") as! TreatmentPageViewController
-        
-        self.dismiss(animated: false, completion: nil)
-        
-        self.present(nextViewController, animated: true)    }
+          }
     
     @IBAction func cancelMedicineInfoButtonAction(_ sender: Any) {
         
@@ -63,7 +62,10 @@ class EditTreatmentPageViewController: UIViewController, UIPickerViewDataSource,
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.navigationController?.navigationBar.barTintColor = mainColor
+        self.navigationController?.navigationBar.tintColor = secondaryColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+
         //pickerDataMed = ["medA", "medB", "medC"]
         //pickerDataFreq = ["her gün", "haftalık", "aylık"]
         
@@ -89,7 +91,7 @@ class EditTreatmentPageViewController: UIViewController, UIPickerViewDataSource,
         return 1
     }
     
-    // The number of rows of data BURDA Bİ BOKLUK VAR
+    // The number of rows of data
     
    func pickerView(_ pickerView : UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         

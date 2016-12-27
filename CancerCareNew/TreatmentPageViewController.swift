@@ -7,13 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 
 class TreatmentPageViewController: UIViewController {
-    
-    
-    
+    var network = NetworkingService()
     var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
+    let database = DatabaseAdapter()
     
 
     @IBOutlet weak var addMedicineButton: UIButton!
@@ -29,6 +29,9 @@ class TreatmentPageViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = mainColor
+        self.navigationController?.navigationBar.tintColor = secondaryColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
 
         // Do any additional setup after loading the view.
     }
@@ -38,6 +41,20 @@ class TreatmentPageViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    func displayMedicines(completion: @escaping (String)->Void) {
+        let currUserID = FIRAuth.auth()?.currentUser?.uid
+        var result = ""
+        /*
+        database.fetchDict(key: "\(currUserID!)", path: "events/"){ resultt in
+            for k in resultt {
+                if (k.key == currDateKey){
+                    result = "Bugünkü etkinlik \(k.value)"
+                }
+            }
+            completion(result)
+        }
+        */
+    }
 
     /*
     // MARK: - Navigation

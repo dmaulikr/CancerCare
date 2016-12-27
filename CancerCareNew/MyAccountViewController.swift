@@ -23,6 +23,10 @@ class MyAccountViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.barTintColor = mainColor
+        self.navigationController?.navigationBar.tintColor = secondaryColor
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
+
         self.navigationController?.title = "Hesabım"
         self.navigationItem.title = self.navigationController?.title
 
