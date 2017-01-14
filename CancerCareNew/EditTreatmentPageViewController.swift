@@ -16,12 +16,10 @@ class EditTreatmentPageViewController: UIViewController, UIPickerViewDataSource,
     
     var pickerDataMed = ["medA", "medB", "medC"]
     var pickerDataFreq = ["her gün", "haftalık", "aylık"]
-    
-        
     var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
-    
     let networkingService = NetworkingService()
     let currUser = FIRAuth.auth()?.currentUser
+    var treatmentRef = TreatmentPageViewController()
 
     @IBOutlet weak var medicineNamePicker: UIPickerView!
     @IBOutlet weak var medicineDosageTextField: UITextField!
@@ -39,10 +37,19 @@ class EditTreatmentPageViewController: UIViewController, UIPickerViewDataSource,
         let row = medicineNamePicker.selectedRow(inComponent: 0)
         let name = pickerView(medicineNamePicker, titleForRow: row, forComponent: 0)
         let freq = pickerView(medicineFrequencyPicker, titleForRow: row, forComponent: 0)
-        
-        networkingService.updateMedicineInfo(user: currUser!, name: name!, dosage: medicineDosageTextField.text!, frequency: freq!)
-        
-        
+        var toBeUpdated = ""
+        toBeUpdated += name!
+        toBeUpdated += ", "
+        toBeUpdated += medicineDosageTextField.text!
+        toBeUpdated += ", "
+        toBeUpdated += freq!
+        toBeUpdated += "\n"
+        treatmentRef.displayMedicines(){r in
+            toBeUpdated += r
+            self.networkingService.updateMedicineInfo(user: currUser!, value: toBeUpdated)
+        }
+        //networkingService.updateMedicineInfo(user: currUser!, value: toBeUpdated)
+        //treatmentRef.addMed(name: name!, dosage: medicineDosageTextField.text!, frequency: freq!)
         
         // go to treatment page
         
@@ -123,6 +130,11 @@ class EditTreatmentPageViewController: UIViewController, UIPickerViewDataSource,
     
     func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        medicineDosageTextField.endEditing(true)
+    }
+    
     
 
  

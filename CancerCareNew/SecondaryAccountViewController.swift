@@ -83,6 +83,9 @@ class SecondaryAccountViewController: UIViewController {
         self.present(myAlert, animated:true, completion:nil);
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        passwordConfirmTextField.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 

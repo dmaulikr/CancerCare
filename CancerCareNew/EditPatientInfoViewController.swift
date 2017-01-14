@@ -80,6 +80,10 @@ class EditPatientInfoViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        editTreatmentTypeTextField.endEditing(true)
+    }
+    
 
     @IBAction func cancelPatientInfoButtonAction(_ sender: Any) {
         /*let vcName = "patientPage"

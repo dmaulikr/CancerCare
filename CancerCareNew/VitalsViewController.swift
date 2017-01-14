@@ -23,10 +23,22 @@ class VitalsViewController: UIViewController, UIPopoverPresentationControllerDel
   
     @IBOutlet weak var showBloodGraphButton: UIButton!
     
+    @IBOutlet weak var showTempGraphButton: UIButton!
+    
     
     @IBAction func showBloodGraphButtonAction(_ sender: Any) {
         
         let vcName = "barChartViewPage"
+        
+        let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
+        
+        self.navigationController?.pushViewController(viewController!, animated: true)
+        
+    }
+    
+    
+    @IBAction func showTempGraphButtonAction(_ sender: Any) {
+        let vcName = "lineChartViewPage"
         
         let viewController = storyboard?.instantiateViewController(withIdentifier: vcName)
         

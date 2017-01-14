@@ -229,29 +229,39 @@ struct NetworkingService {
     
     
     
-    func updateMedicineInfo(user: FIRUser, name: String, dosage: String, frequency: String){
+    func updateMedicineInfo(user: FIRUser, value: String){
         let userID = user.uid
         
         // create medEventRef in firebase
-        let medEventRef = databaseRef.child("medEvent").child(userID)
-        if name != "" {
-            medEventRef.child(getUserDate()).setValue(name)
-        }
+        let currDateKey = getUserDate()
+        let medInfoRef = databaseRef.child("medInfo").child(userID).child(currDateKey)
+        medInfoRef.setValue(value)
         
-        // create medInfoRef in firebase
-        let medInfoRef = databaseRef.child("medInfo").child(userID)
+        /*
         if name != "" {
-            medInfoRef.child("name").setValue(name)
+            //medEventRef.child(getUserDate()).setValue(name)
+        }
+        // create medInfoRef in firebase
+        let medInfoRef = databaseRef.child("medInfo").child(userID).child(currDateKey)
+        var medValue = ""
+        if name != "" {
+            medValue += name
+            medValue += ", "
+            //medInfoRef.child("name").setValue(name)
         }
         if dosage != "" {
-            medInfoRef.child("dosage").setValue(dosage)
+            medValue += dosage
+            medValue += ", "
+            //medInfoRef.child("dosage").setValue(dosage)
         }
         if frequency != "" {
-            medInfoRef.child("frequency").setValue(frequency)
+            medValue += frequency
+            //medInfoRef.child("frequency").setValue(frequency)
         }
+         */
+        
+        medInfoRef.setValue(value)
     }
-    
-    
     
     func updateChildBlood(user: FIRUser, rbc: String, wbc: String, anc: String){
         
@@ -356,7 +366,7 @@ struct NetworkingService {
         let eventRef = databaseRef.child("events/\(userID)/\(dateKey)")
         
         
-        let eventToBeSaved = "\(title): ,Yer: \(place), Tarih: \(day).\(month).\(year), Saat: \(hour)"
+        let eventToBeSaved = ": \(title), Yer: \(place), Tarih: \(day).\(month).\(year), Saat: \(hour)"
         
         eventRef.setValue(eventToBeSaved)
         

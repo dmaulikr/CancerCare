@@ -14,8 +14,9 @@ class TreatmentPageViewController: UIViewController {
     var network = NetworkingService()
     var storyboardRef = UIStoryboard(name: "Main", bundle: nil)
     let database = DatabaseAdapter()
-    
+    var meds = "deneme"
 
+    @IBOutlet weak var medsTextView: UITextView!
     @IBOutlet weak var addMedicineButton: UIButton!
     
     @IBAction func addMedicineButtonAction(_ sender: Any) {
@@ -26,13 +27,16 @@ class TreatmentPageViewController: UIViewController {
     
     @IBOutlet weak var medicineTableView: UITableView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.title = "İlaçlarım"
+        self.navigationItem.title = "İlaçlarım"
         self.navigationController?.navigationBar.barTintColor = mainColor
         self.navigationController?.navigationBar.tintColor = secondaryColor
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName:UIColor.white]
-
+        displayMedicines(){r in
+            self.medsTextView.text = r
+        }
         // Do any additional setup after loading the view.
     }
 
@@ -43,19 +47,27 @@ class TreatmentPageViewController: UIViewController {
     
     func displayMedicines(completion: @escaping (String)->Void) {
         let currUserID = FIRAuth.auth()?.currentUser?.uid
+        let currDateKey = network.getUserDate()
         var result = ""
-        /*
-        database.fetchDict(key: "\(currUserID!)", path: "events/"){ resultt in
+        
+        database.fetchDict(key: "\(currUserID!)", path: "medInfo/"){ resultt in
             for k in resultt {
                 if (k.key == currDateKey){
-                    result = "Bugünkü etkinlik \(k.value)"
+                    result = "\(k.value)"
                 }
             }
             completion(result)
         }
-        */
     }
-
+    
+    func addMed(name: String, dosage: String, frequency: String){
+        displayMedicines(){r in
+            self.meds = r
+        }
+    }
+    
+    
+    
     /*
     // MARK: - Navigation
 

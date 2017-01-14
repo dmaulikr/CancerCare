@@ -41,7 +41,6 @@ class EditDoctorPageViewController: UIViewController {
         doctorMailTextField.text = ""
         doctorPhoneTextField.text = ""
         doctorAddressTextField.text = ""
-
     }
     
     func displayMessage(alertMessage: String) {
@@ -75,6 +74,11 @@ class EditDoctorPageViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        doctorAddressTextField.endEditing(true)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

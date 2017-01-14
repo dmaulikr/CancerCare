@@ -49,6 +49,10 @@ class MyAccountViewController: UIViewController {
         newPasswordTextField.text = ""
         confirmNewPasswordTextField.text = ""
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        confirmNewPasswordTextField.endEditing(true)
+    }
     /*
     // MARK: - Navigation
 

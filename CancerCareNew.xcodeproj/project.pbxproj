@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		102280B21DE8A74500D9F21A /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 102280B11DE8A74500D9F21A /* NetworkingService.swift */; };
 		1028C2CA1E0C7005001EA5FC /* BarChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1028C2C91E0C7005001EA5FC /* BarChartViewController.swift */; };
-		10360AA11E1305A0007959B4 /* Charts in Resources */ = {isa = PBXBuildFile; fileRef = 10360AA01E13059F007959B4 /* Charts */; };
-		10360AAE1E1305C6007959B4 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 10360AA91E1305AE007959B4 /* Charts.framework */; };
-		10360AAF1E1305C6007959B4 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 10360AA91E1305AE007959B4 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		10360B1F1E131C78007959B4 /* Ana Sayfa.png in Resources */ = {isa = PBXBuildFile; fileRef = 10360B151E131C78007959B4 /* Ana Sayfa.png */; };
 		10360B201E131C79007959B4 /* Çıkış Yap.png in Resources */ = {isa = PBXBuildFile; fileRef = 10360B161E131C78007959B4 /* Çıkış Yap.png */; };
 		10360B211E131C79007959B4 /* Çocuğum.png in Resources */ = {isa = PBXBuildFile; fileRef = 10360B171E131C78007959B4 /* Çocuğum.png */; };
@@ -22,7 +19,8 @@
 		10360B261E131C79007959B4 /* Planlayıcı.png in Resources */ = {isa = PBXBuildFile; fileRef = 10360B1C1E131C78007959B4 /* Planlayıcı.png */; };
 		10360B271E131C79007959B4 /* Sağlık Değerleri.png in Resources */ = {isa = PBXBuildFile; fileRef = 10360B1D1E131C78007959B4 /* Sağlık Değerleri.png */; };
 		10360B281E131C79007959B4 /* Tedavi Bilgileri.png in Resources */ = {isa = PBXBuildFile; fileRef = 10360B1E1E131C78007959B4 /* Tedavi Bilgileri.png */; };
-		10360B2E1E1320D5007959B4 /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10360B2D1E1320D5007959B4 /* Palette.swift */; };
+		103766361E2AB8040018CD98 /* LineChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103766351E2AB8040018CD98 /* LineChartViewController.swift */; };
+		103766381E2AC4950018CD98 /* LineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 103766371E2AC4950018CD98 /* LineChart.swift */; };
 		105244E41DEA0654008B5FF0 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244E31DEA0654008B5FF0 /* MenuTableViewController.swift */; };
 		105244E61DEA11F0008B5FF0 /* PatientPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244E51DEA11F0008B5FF0 /* PatientPageViewController.swift */; };
 		105244E81DEA1211008B5FF0 /* OrganizerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 105244E71DEA1211008B5FF0 /* OrganizerViewController.swift */; };
@@ -45,6 +43,7 @@
 		10C52CDC1E04AC3200CC7E7B /* EditDoctorPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C52CDB1E04AC3200CC7E7B /* EditDoctorPageViewController.swift */; };
 		10C52CDE1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10C52CDD1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift */; };
 		10CE083C1E03523E0091B020 /* ReportPopUPViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10CE083B1E03523E0091B020 /* ReportPopUPViewController.swift */; };
+		10F5B1A01E13BFFC0040A2FD /* Palette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 10F5B19F1E13BFFC0040A2FD /* Palette.swift */; };
 		538907C2037C428455849A7B /* Pods_CancerCareNew.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C84C37ED1E47B99DB62B2E60 /* Pods_CancerCareNew.framework */; };
 		98599ED21DEA51C9003DAB0C /* EditPatientInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98599ED11DEA51C9003DAB0C /* EditPatientInfoViewController.swift */; };
 		9943A3CC1DE91D1400F95141 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9943A3CB1DE91D1400F95141 /* GoogleService-Info.plist */; };
@@ -62,34 +61,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		10360AA81E1305AE007959B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10360AA21E1305AE007959B4 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06165F241D8110E600722320;
-			remoteInfo = Charts;
-		};
-		10360AAA1E1305AE007959B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10360AA21E1305AE007959B4 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06B120D51D811E6200D14B02;
-			remoteInfo = ChartsRealm;
-		};
-		10360AAC1E1305AE007959B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10360AA21E1305AE007959B4 /* Charts.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 06165F2E1D8110E600722320;
-			remoteInfo = ChartsTests;
-		};
-		10360AB01E1305C6007959B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 10360AA21E1305AE007959B4 /* Charts.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 06165F231D8110E600722320;
-			remoteInfo = Charts;
-		};
 		10C18A8B1DE88F84000AE6E1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 10C18A6B1DE88F84000AE6E1 /* Project object */;
@@ -113,7 +84,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				10360AAF1E1305C6007959B4 /* Charts.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -123,8 +93,6 @@
 /* Begin PBXFileReference section */
 		102280B11DE8A74500D9F21A /* NetworkingService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
 		1028C2C91E0C7005001EA5FC /* BarChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarChartViewController.swift; sourceTree = "<group>"; };
-		10360AA01E13059F007959B4 /* Charts */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Charts; path = "../../Charts-master/Source/Charts"; sourceTree = "<group>"; };
-		10360AA21E1305AE007959B4 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		10360B151E131C78007959B4 /* Ana Sayfa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Ana Sayfa.png"; path = "../../ikonlar/Ana Sayfa.png"; sourceTree = "<group>"; };
 		10360B161E131C78007959B4 /* Çıkış Yap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Çıkış Yap.png"; path = "../../ikonlar/Çıkış Yap.png"; sourceTree = "<group>"; };
 		10360B171E131C78007959B4 /* Çocuğum.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Çocuğum.png"; path = "../../ikonlar/Çocuğum.png"; sourceTree = "<group>"; };
@@ -135,7 +103,8 @@
 		10360B1C1E131C78007959B4 /* Planlayıcı.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Planlayıcı.png"; path = "../../ikonlar/Planlayıcı.png"; sourceTree = "<group>"; };
 		10360B1D1E131C78007959B4 /* Sağlık Değerleri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Sağlık Değerleri.png"; path = "../../ikonlar/Sağlık Değerleri.png"; sourceTree = "<group>"; };
 		10360B1E1E131C78007959B4 /* Tedavi Bilgileri.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Tedavi Bilgileri.png"; path = "../../ikonlar/Tedavi Bilgileri.png"; sourceTree = "<group>"; };
-		10360B2D1E1320D5007959B4 /* Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Palette.swift; path = ../../Palette.swift; sourceTree = "<group>"; };
+		103766351E2AB8040018CD98 /* LineChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChartViewController.swift; sourceTree = "<group>"; };
+		103766371E2AC4950018CD98 /* LineChart.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LineChart.swift; sourceTree = "<group>"; };
 		105244E31DEA0654008B5FF0 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuTableViewController.swift; sourceTree = "<group>"; };
 		105244E51DEA11F0008B5FF0 /* PatientPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientPageViewController.swift; sourceTree = "<group>"; };
 		105244E71DEA1211008B5FF0 /* OrganizerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizerViewController.swift; sourceTree = "<group>"; };
@@ -164,6 +133,7 @@
 		10C52CDB1E04AC3200CC7E7B /* EditDoctorPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditDoctorPageViewController.swift; sourceTree = "<group>"; };
 		10C52CDD1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTreatmentPageViewController.swift; sourceTree = "<group>"; };
 		10CE083B1E03523E0091B020 /* ReportPopUPViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportPopUPViewController.swift; sourceTree = "<group>"; };
+		10F5B19F1E13BFFC0040A2FD /* Palette.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Palette.swift; sourceTree = "<group>"; };
 		17C0A1D8691B0184FE376849 /* Pods-CancerCareNew.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNew.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNew/Pods-CancerCareNew.debug.xcconfig"; sourceTree = "<group>"; };
 		17FBBDDFB3E463171204566B /* Pods_CancerCareNewUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CancerCareNewUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		48FD740DEC9EDB46CDABC5B4 /* Pods-CancerCareNew.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CancerCareNew.release.xcconfig"; path = "Pods/Target Support Files/Pods-CancerCareNew/Pods-CancerCareNew.release.xcconfig"; sourceTree = "<group>"; };
@@ -192,7 +162,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				538907C2037C428455849A7B /* Pods_CancerCareNew.framework in Frameworks */,
-				10360AAE1E1305C6007959B4 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,16 +184,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		10360AA31E1305AE007959B4 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				10360AA91E1305AE007959B4 /* Charts.framework */,
-				10360AAB1E1305AE007959B4 /* ChartsRealm.framework */,
-				10360AAD1E1305AE007959B4 /* ChartsTests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		10C18A6A1DE88F84000AE6E1 = {
 			isa = PBXGroup;
 			children = (
@@ -250,7 +209,6 @@
 		10C18A751DE88F84000AE6E1 /* CancerCareNew */ = {
 			isa = PBXGroup;
 			children = (
-				10360B2D1E1320D5007959B4 /* Palette.swift */,
 				10360B151E131C78007959B4 /* Ana Sayfa.png */,
 				10360B161E131C78007959B4 /* Çıkış Yap.png */,
 				10360B171E131C78007959B4 /* Çocuğum.png */,
@@ -261,8 +219,6 @@
 				10360B1C1E131C78007959B4 /* Planlayıcı.png */,
 				10360B1D1E131C78007959B4 /* Sağlık Değerleri.png */,
 				10360B1E1E131C78007959B4 /* Tedavi Bilgileri.png */,
-				10360AA21E1305AE007959B4 /* Charts.xcodeproj */,
-				10360AA01E13059F007959B4 /* Charts */,
 				9943A3CB1DE91D1400F95141 /* GoogleService-Info.plist */,
 				10C18A761DE88F84000AE6E1 /* AppDelegate.swift */,
 				10C18A7A1DE88F84000AE6E1 /* Main.storyboard */,
@@ -297,6 +253,9 @@
 				10C52CDB1E04AC3200CC7E7B /* EditDoctorPageViewController.swift */,
 				10C52CDD1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift */,
 				1028C2C91E0C7005001EA5FC /* BarChartViewController.swift */,
+				10F5B19F1E13BFFC0040A2FD /* Palette.swift */,
+				103766351E2AB8040018CD98 /* LineChartViewController.swift */,
+				103766371E2AC4950018CD98 /* LineChart.swift */,
 			);
 			path = CancerCareNew;
 			sourceTree = "<group>";
@@ -360,7 +319,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				10360AB11E1305C6007959B4 /* PBXTargetDependency */,
 			);
 			name = CancerCareNew;
 			productName = CancerCareNew;
@@ -447,12 +405,6 @@
 			mainGroup = 10C18A6A1DE88F84000AE6E1;
 			productRefGroup = 10C18A741DE88F84000AE6E1 /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = 10360AA31E1305AE007959B4 /* Products */;
-					ProjectRef = 10360AA21E1305AE007959B4 /* Charts.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				10C18A721DE88F84000AE6E1 /* CancerCareNew */,
@@ -461,30 +413,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		10360AA91E1305AE007959B4 /* Charts.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = Charts.framework;
-			remoteRef = 10360AA81E1305AE007959B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		10360AAB1E1305AE007959B4 /* ChartsRealm.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = ChartsRealm.framework;
-			remoteRef = 10360AAA1E1305AE007959B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		10360AAD1E1305AE007959B4 /* ChartsTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = ChartsTests.xctest;
-			remoteRef = 10360AAC1E1305AE007959B4 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		10C18A711DE88F84000AE6E1 /* Resources */ = {
@@ -497,7 +425,6 @@
 				999D86A31E0072A200A0DE4D /* kac3a7uv.png in Resources */,
 				9943A3CC1DE91D1400F95141 /* GoogleService-Info.plist in Resources */,
 				999D86A91E00769100A0DE4D /* d-r-kacuv-bir-oyuncak-iki-mutlu-cocuk.jpg in Resources */,
-				10360AA11E1305A0007959B4 /* Charts in Resources */,
 				10360B251E131C79007959B4 /* İkincil Hesap.png in Resources */,
 				10360B231E131C79007959B4 /* Hakkımızda.png in Resources */,
 				999D86A51E0073FC00A0DE4D /* kacuv_logo.jpg in Resources */,
@@ -676,6 +603,7 @@
 				105244EA1DEA1236008B5FF0 /* VitalsViewController.swift in Sources */,
 				105244EC1DEA124A008B5FF0 /* MyAccountViewController.swift in Sources */,
 				9943A3CE1DE91DD100F95141 /* LoginViewController.swift in Sources */,
+				103766381E2AC4950018CD98 /* LineChart.swift in Sources */,
 				98599ED21DEA51C9003DAB0C /* EditPatientInfoViewController.swift in Sources */,
 				105244E61DEA11F0008B5FF0 /* PatientPageViewController.swift in Sources */,
 				10C52CDE1E04ACB900CC7E7B /* EditTreatmentPageViewController.swift in Sources */,
@@ -691,12 +619,13 @@
 				105244E41DEA0654008B5FF0 /* MenuTableViewController.swift in Sources */,
 				9994F8AD1DFA00DB0082BD24 /* DatabaseAdapter.swift in Sources */,
 				105244F01DEA127A008B5FF0 /* AboutViewController.swift in Sources */,
-				10360B2E1E1320D5007959B4 /* Palette.swift in Sources */,
+				10F5B1A01E13BFFC0040A2FD /* Palette.swift in Sources */,
 				10C52CDA1E04A18700CC7E7B /* DoctorPageViewController.swift in Sources */,
 				10C18A771DE88F84000AE6E1 /* AppDelegate.swift in Sources */,
 				105244EE1DEA125F008B5FF0 /* SecondaryAccountViewController.swift in Sources */,
 				10C52CD81E049F5800CC7E7B /* TreatmentPageViewController.swift in Sources */,
 				105244F21DEA12B9008B5FF0 /* LogoutViewController.swift in Sources */,
+				103766361E2AB8040018CD98 /* LineChartViewController.swift in Sources */,
 				10C18A7F1DE88F84000AE6E1 /* CancerCareNew.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -720,11 +649,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		10360AB11E1305C6007959B4 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Charts;
-			targetProxy = 10360AB01E1305C6007959B4 /* PBXContainerItemProxy */;
-		};
 		10C18A8C1DE88F84000AE6E1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 10C18A721DE88F84000AE6E1 /* CancerCareNew */;

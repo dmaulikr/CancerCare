@@ -88,7 +88,7 @@ class HomePageViewController: UIViewController {
         self.isAddEnabled = false
         self.saveMoodButton.setTitle("Ekle", for: .normal)
         self.moodSlider.isHidden = true
-        eventLabel.text = "Etkinlik bilgisi yükleniyöördü..."
+        eventLabel.text = "Etkinlik bilgisi yükleniyor..."
         
          displayCurrentMood(){r in
             self.moodTextLabel.text = r
@@ -104,49 +104,65 @@ class HomePageViewController: UIViewController {
     }
 
     func getCurrentDate() -> String {
-        
         let currentDateTime = Date()
-        
         let userCalendar = Calendar.current
-        
         let requestedComponents: Set<Calendar.Component> = [
-            
             .year,
-            
             .month,
-            
             .day
-            
         ]
-        
-        
-        
         let dateComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
-        
-        
-        
         let year = dateComponents.year?.description
-        
         let month = dateComponents.month?.description
-        
+        let day = dateComponents.day?.description
+        var dateKey = ""
+        dateKey += year!
+        dateKey += month!
+        dateKey += day!
+        return dateKey
+    }
+
+    func getCurrentDateForEvent() -> String {
+        let currentDateTime = Date()
+        let userCalendar = Calendar.current
+        let requestedComponents: Set<Calendar.Component> = [
+            .year,
+            .month,
+            .day
+        ]
+        let dateComponents = userCalendar.dateComponents(requestedComponents, from: currentDateTime)
+        let year = dateComponents.year?.description
+        let month = dateComponents.month?.description
         let day = dateComponents.day?.description
         
-        
+        var newMonth = "0"
+        if month == "1" || month == "2" || month == "3" || month == "4" || month == "5" || month == "6" || month == "7" || month == "8" || month == "9"{
+            //var newMonth = "0"
+            newMonth += month!
+        }
+        var newDay = "0"
+        if day == "1" || day == "2" || day == "3" || day == "4" || day == "5" || day == "6" || day == "7" || day == "8" || day == "9"{
+            //var newDay = "0"
+            newDay += day!
+        }
+
         
         var dateKey = ""
-        
         dateKey += year!
-        
-        dateKey += month!
-        
-        dateKey += day!
+        if month == "1" || month == "2" || month == "3" || month == "4" || month == "5" || month == "6" || month == "7" || month == "8" || month == "9"{
+            dateKey += newMonth
+        } else {
+            dateKey += month!
+        }
+        if day == "1" || day == "2" || day == "3" || day == "4" || day == "5" || day == "6" || day == "7" || day == "8" || day == "9"{
+            dateKey += newDay
+        } else {
+            dateKey += day!
+        }
         
         return dateKey
-        
-        
-        
     }
-    
+
     
     
     func displayCurrentMood(completion: @escaping (String)->Void){
@@ -184,7 +200,7 @@ class HomePageViewController: UIViewController {
     func displayCurrentEvent(completion: @escaping (String)->Void) {
         
         //let eventPath = "events/\(database.uid)"
-        let currDateKey = getCurrentDate()
+        let currDateKey = getCurrentDateForEvent()
         let currUserID = FIRAuth.auth()?.currentUser?.uid
         var result = ""
         database.fetchDict(key: "\(currUserID!)", path: "events/"){ resultt in

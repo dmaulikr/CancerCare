@@ -47,6 +47,9 @@ PODS:
     - GoogleToolboxForMac/NSString+URLArguments (= 2.1.0)
   - GoogleToolboxForMac/NSString+URLArguments (2.1.0)
   - GTMSessionFetcher/Core (1.1.7)
+  - PNChart (0.8.9):
+    - UICountingLabel (~> 1.2.0)
+  - UICountingLabel (1.2.0)
 
 DEPENDENCIES:
   - Charts
@@ -54,6 +57,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - PNChart
 
 SPEC CHECKSUMS:
   Charts: 0e84f4418e87dad6a9edde221fba37ebb51d3ba7
@@ -68,7 +72,9 @@ SPEC CHECKSUMS:
   GoogleSymbolUtilities: 631ee17048aa5e9ab133470d768ea997a5ef9b96
   GoogleToolboxForMac: 2b2596cbb7186865e98cadf2b1e262d851c2b168
   GTMSessionFetcher: a1f8ed39e4fe21c68957daed472c7afbcdf29166
+  PNChart: 84774d225c2126ded6c93d4dbe6ae98c3a73c2d2
+  UICountingLabel: 1db4e7d023e1762171eb226d6dff47a7a84f27aa
 
-PODFILE CHECKSUM: 0475376c122b9757aed38a9f0bbb8e06bcba5146
+PODFILE CHECKSUM: 7b724c635f3984a77351dce17ea3f69b77f323a6
 
 COCOAPODS: 1.1.1

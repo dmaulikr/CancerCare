@@ -225,6 +225,11 @@ class OrganizerViewController: UIViewController, UITextFieldDelegate {
         // Do any additional setup after loading the view.
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        eventLocationTextField.endEditing(true)
+        eventTextField.endEditing(true)
+    }
+    
     /*
     func textFieldDidBeginEditing(_ textField: UITextField) {
         moveTextField(textField: textField, moveDist: -150, up:true)

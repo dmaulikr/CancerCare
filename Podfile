@@ -9,6 +9,8 @@ pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
 pod 'Firebase/Storage'
+pod 'PNChart'
+pod 'Charts'
 
 
   # Pods for CancerCareNew
@@ -23,5 +25,6 @@ pod 'Firebase/Storage'
     # Pods for testing
   end
 
-#pod 'Charts'
+
+
 end
